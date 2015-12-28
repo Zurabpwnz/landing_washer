@@ -3,3 +3,8 @@
  */
 ;
 
+
+/* fancybox */
+	$(document).ready(function() {
+		$(".fancybox").fancybox();
+	});
