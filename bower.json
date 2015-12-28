@@ -1,0 +1,23 @@
+{
+  "name": "bower init",
+  "description": "washer",
+  "main": "main",
+  "moduleType": [],
+  "authors": [
+    "Zurab"
+  ],
+  "license": "MIT",
+  "homepage": "",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "fancybox": "~2.1.5",
+    "fotorama": "~4.6.4"
+  }
+}

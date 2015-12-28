@@ -1,0 +1,43 @@
+@import "compass/reset";
+@import "compass/css3";
+@import "compass/layout";
+@import "compass/typography";
+@import "compass/utilities";
+
+@import "icons/*.png";
+@include all-icons-sprites;
+
+
+$border: 1px solid #ccc;
+$zurab: red;
+
+
+body {
+	background: red;
+
+	p{
+		font-size: 20px;
+		font-family: Tahoma;
+		border: $border;
+	}
+
+	.papa{
+		border: $border;
+		background: $zurab;
+	}
+
+}
+
+%display {
+  display: inline-block;
+  vertical-align: top;
+}
+
+.left__block {
+  @extend %display;
+}
+
+
+h1{
+	@extend %display;
+}
