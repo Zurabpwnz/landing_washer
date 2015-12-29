@@ -63,32 +63,236 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   display: block;
 }
 
+/* line 80, icons/*.png */
+.icons-sprite, .icons-chekmark, .icons-gears, .icons-gears_with_bg, .icons-phone_blue, .icons-phone_red {
+  background-image: url('/images/icons-s359ce39310.png');
+  background-repeat: no-repeat;
+}
+
+/* line 84, ../../../Ruby22-x64/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/utilities/sprites/_base.scss */
+.icons-chekmark {
+  background-position: 0 0;
+}
+
+/* line 84, ../../../Ruby22-x64/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/utilities/sprites/_base.scss */
+.icons-gears {
+  background-position: 0 -11px;
+}
+
+/* line 84, ../../../Ruby22-x64/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/utilities/sprites/_base.scss */
+.icons-gears_with_bg {
+  background-position: 0 -36px;
+}
+
+/* line 84, ../../../Ruby22-x64/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/utilities/sprites/_base.scss */
+.icons-phone_blue {
+  background-position: 0 -86px;
+}
+
+/* line 84, ../../../Ruby22-x64/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/utilities/sprites/_base.scss */
+.icons-phone_red {
+  background-position: 0 -101px;
+}
+
 /* Zurab */
-/* line 5, ../sass/_main.scss */
-body {
-  background: #000;
-  font-family: 'Roboto Condensed', sans-serif;
+/* line 2, ../sass/_main.scss */
+* {
+  margin: 0;
+  padding: 0;
 }
 
 /* line 10, ../sass/_main.scss */
+a:focus {
+  outline: none;
+}
+
+/* line 14, ../sass/_main.scss */
+body {
+  background: #fff;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 1.2;
+}
+
+/* line 22, ../sass/_main.scss */
 h1,
 h2,
 h3,
 h4 {
   font-family: 'Roboto', sans-serif;
+  font-weight: 300;
 }
 
-/* line 17, ../sass/_main.scss */
-span {
-  padding: 2px 0;
+/* line 30, ../sass/_main.scss */
+.title {
+  margin: 40px 0;
+  font-size: 46px;
+  line-height: 1.2;
+  text-align: center;
 }
 
-/* line 1, ../sass/_marina.scss */
-p {
-  background: red;
+/* services
+==================================================*/
+/* line 40, ../sass/_main.scss */
+.services {
+  overflow: hidden;
+  margin-bottom: 165px;
 }
 
-/* line 7, ../sass/_marina.scss */
-h1 {
-  background: #ff00ff;
+/* line 50, ../sass/_main.scss */
+.services__title {
+  font-size: 30px;
+  line-height: 1.2;
+}
+
+/* line 54, ../sass/_main.scss */
+.services__characteristics {
+  margin-left: 22px;
+  margin-top: 30px;
+  list-style-image: url("../images/icons/chekmark.png");
+}
+
+/* correct
+==================================================*/
+/* line 66, ../sass/_main.scss */
+.correct {
+  overflow: hidden;
+}
+
+/* line 72, ../sass/_main.scss */
+.correct__desc p {
+  margin: 5px 0;
+  font-size: 16px;
+  line-height: 1.2;
+}
+
+/* CORNER BLOCK
+===================================================*/
+/* line 85, ../sass/_main.scss */
+.corner {
+  overflow: hidden;
+}
+
+/* line 89, ../sass/_main.scss */
+.corner__item {
+  margin-bottom: 60px;
+}
+
+/* line 93, ../sass/_main.scss */
+.corner__link {
+  overflow: hidden;
+  position: relative;
+  display: block;
+  margin-bottom: 30px;
+}
+/* line 99, ../sass/_main.scss */
+.corner__link .corner__zoom {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 170px;
+  height: 48px;
+  font-size: 18px;
+  line-height: 48px;
+  background: #4198d2;
+  color: #fff;
+  border-radius: 3px;
+  text-align: center;
+}
+/* line 114, ../sass/_main.scss */
+.corner__link img {
+  height: auto;
+  width: 100%;
+}
+/* line 120, ../sass/_main.scss */
+.corner__link:hover .corner__link--hover {
+  background: #535751;
+  display: block;
+  width: 100%;
+  height: 100%;
+  opacity: 0.6;
+  left: 0;
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  z-index: 22;
+}
+/* line 133, ../sass/_main.scss */
+.corner__link:hover .corner__zoom {
+  top: 50%;
+  left: 50%;
+  margin-top: -24px;
+  margin-left: -85px;
+  display: block;
+  z-index: 33;
+}
+
+/* error
+====================================================*/
+/* line 152, ../sass/_main.scss */
+.error {
+  overflow: hidden;
+  position: relative;
+}
+
+/* line 157, ../sass/_main.scss */
+.error__desc {
+  overflow: hidden;
+  background: #f96854;
+  margin-bottom: 30px;
+  padding: 30px;
+  border-radius: 3px;
+  columns: #fff;
+}
+
+/* line 166, ../sass/_main.scss */
+.error__close {
+  position: absolute;
+  top: 30px;
+  right: 45px;
+  color: #fff;
+}
+
+/* line 173, ../sass/_main.scss */
+.error__title {
+  font-size: 24px;
+  line-height: 1.2;
+  color: #fff;
+}
+
+/* line 178, ../sass/_main.scss */
+.error__cnt {
+  margin: 5px 0 0;
+  font-size: 14px;
+  line-height: 1.2;
+  color: #fff;
+  text-transform: uppercase;
+}
+
+/* line 185, ../sass/_main.scss */
+address {
+  color: #fff;
+}
+
+/* reviews
+===================================================*/
+/* line 201, ../sass/_main.scss */
+.reviews__item {
+  margin-bottom: 30px;
+}
+
+/* line 205, ../sass/_main.scss */
+.review__persone__name {
+  margin: 20px 0 0 0;
+  font-size: 24px;
+  line-height: 1.2;
+}
+
+/* line 210, ../sass/_main.scss */
+.review__persone__comment {
+  margin: 5px 0;
+  font-size: 16px;
+  line-height: 1.2;
 }

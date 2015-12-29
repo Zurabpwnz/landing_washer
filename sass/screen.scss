@@ -3,5 +3,8 @@
 @import "compass/layout";
 @import "compass/typography";
 @import "compass/utilities";
-@import "_main.scss";
-@import "_marina.scss";
+@import "icons/*.png";
+@include all-icons-sprites;
+
+@import "_main";
+@import "_marina";
