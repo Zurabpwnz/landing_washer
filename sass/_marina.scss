@@ -1,0 +1,639 @@
+@charset "UTF-8";
+@import "colors";
+@import "mixins";
+
+/* RESET INPUTS
+============================================================*/
+::-webkit-input-placeholder {opacity: 1;}
+::-moz-placeholder {opacity: 1;}/* Firefox 19+ */
+:-moz-placeholder {opacity: 1;}/* Firefox 18- */
+:-ms-input-placeholder {opacity: 1;}
+
+::-webkit-input-placeholder {color: rgba($placeholder, 1); font-size: 143x; font-style: italic;}
+::-moz-placeholder {color: rgba($placeholder, 1); font-size: 13px; font-style: italic;}/* Firefox 19+ */
+:-moz-placeholder {color: rgba($placeholder, 1); font-size: 13px; font-style: italic;}/* Firefox 18- */
+:-ms-input-placeholder {color: rgba($placeholder, 1); font-size: 13px; font-style: italic;}
+
+[type="search"], [type="search"]::-webkit-search-cancel-button {
+    @include appearance (none);
+}
+
+[type="search"]::-webkit-search-decoration,
+[type="search"]::-webkit-search-cancel-button,
+[type="search"]::-webkit-search-results-button,
+[type="search"]::-webkit-search-results-decoration {
+    display: none;
+}
+
+[type=date]::-webkit-inner-spin-button {
+    @include appearance (none);
+    display: none;
+}
+
+[type=date]::-webkit-calendar-picker-indicator {
+    @include appearance (none);
+    display: none;
+}
+
+input, textarea, button, select {
+    @include borderRadius (2px);
+	background: $white;
+    border: none;
+    display: block;
+	color: $bgGray;
+    font: {
+        family: 'Roboto', sans-serif;
+        weight: 300;
+        size: 18px;
+    }
+    line-height: 20px;
+    margin-bottom: 15px;
+    padding: 14px 15px;
+    width: 100%;
+}
+[type="submit"], [type="reset"], .btn {
+    @include appearance (none);
+    @include borderRadius (2px);
+}
+[type="submit"], [type="reset"], button, .btn {
+    @include bgGradient(top, $btnBordo, $btnBordo2);
+	border: none;
+	color: $white;
+    font: {
+        family: 'Roboto', sans-serif;
+        weight: 500;
+        size: 18px;
+    }
+    line-height: 20px;
+    padding: 14px 15px;
+    
+    &:hover {
+        @include bgGradient(top, $btnBordo * 1.1, $btnBordo2 * 1.1);
+        cursor: pointer;
+    }
+}
+button, .btn {display: inline-block;}
+
+.select {
+    background: $white;
+    display: block;
+    margin-bottom: 15px;
+    position: relative;
+    z-index: 2;
+    
+    &::before, &::after {
+        content: '';
+        position: absolute;
+        z-index: -1;
+    }
+    
+    &::before {
+        background: rgba($bgGray, 0.7);
+        width: 1px;
+        height: 100%;
+        top: 0;
+        right: 37px;
+    }
+
+    &::after {
+        border-width: 7px 5px 0 5px;
+        border-style: solid;
+        border-color: rgba($bgGray, 0.7) transparent;
+        width: 0;
+        height: 0;
+        top: 50%;
+        right: 14px;
+        margin-top: -3px;
+    }
+
+    select {
+        @include appearance (none);
+        background: none;
+        border: 0px none;
+        cursor: pointer;
+        margin-bottom: 0;
+        padding: 14px 45px 14px 15px;
+        &::-ms-expand {display: none;}
+
+        option {
+            background: none;
+            border: 0px none;
+            width: 100%;
+        }
+    }
+}
+textarea {
+    resize: none;
+}
+label {
+    display: block;
+    color: $white;
+    font: {
+        size: 18px;
+        weight: 500;
+    }
+    margin-bottom: 3px;
+}
+/* END RESET INPUTS
+============================================================*/
+
+body {
+    font: {
+        family: 'Roboto', sans-serif;
+        weight: 300;
+    }
+}
+
+.flexbox {
+    @include flexbox;
+    @include flexFlow(row wrap);
+}
+
+.footnote {
+    font-size: 11px;
+}
+
+form {
+    background: $bgGray;
+    padding: 10px 30px;
+    
+    [type="submit"] {
+        margin: 30px 0 30px;
+    }
+}
+
+th {
+    text-align: left;
+    font-size: 14px;
+    font-weight: 300;
+}
+
+th, td {
+    border-bottom: 1px solid rgba($bgGray, 0.12);
+    color: $bgGray;
+    padding: 8px 15px;
+}
+
+td {
+    
+    font-size: 18px;
+    font-weight: 400;
+}
+
+tr:nth-child(2n) {
+    background: rgba($bgGray, 0.02);
+}
+
+.banner-1 {
+    background: $bgBlue url('../images/ban-1.png') center 15px no-repeat;
+    display: table;
+    width: 100%;
+    padding-top: 1px;
+    position: relative;
+    
+    &::before, &::after {
+        @include bgGradient-figure(30deg, $white 50%, transparent 50%, -30deg, $white 50%, transparent 50%);
+        background-repeat: repeat-x, repeat-x, no-repeat;
+        background-position: 42px 0, 42px 0, 0 42px;
+        background-size: 84px 84px, 84px 84px, auto auto;
+        content: '';
+        width: 100%;
+        height: 44px;
+        position: absolute;
+        left: 0;
+        z-index: 3;
+        
+    }
+    
+    &::before {
+        @include bgGradient-figure(-30deg, $white 50%, transparent 50%, -30deg, transparent 50%, $white 50%);
+        background-repeat: no-repeat, repeat-x, repeat-x;
+        background-position:  0 42px, 42px 0, 42px 0;
+        background-size: 84px 84px, 84px 84px, auto auto;
+        
+        top: 0;
+        display: none;
+    }
+    
+    &::after {
+        bottom: 0;
+    }
+    
+    .flexbox {
+        justify-content: flex-end;
+    }
+    
+    h1 {
+        color: $white;
+        font: {
+            size: 50px;
+            weight: 400;
+        }
+        line-height: 1.1;
+        margin-bottom: 10px;
+        text-shadow: 0 0 1px rgba($bgBlue2, 1);
+        text-align: center;
+        
+        span {
+            display: block;
+            font: {
+                size: 30px;
+            }
+        }
+    }
+    
+    h2 {
+        font: {
+            size: 46px;
+            weight: 300;
+        }
+        line-height: 1;
+        text-shadow: 0 0 1px rgba($bgBlue2, 1);
+    }
+    
+    h3 {
+        font: {
+            size: 36px;
+            weight: 300;
+        }
+        line-height: 1;
+    }
+    
+    [class*="col-"] {
+        position: relative;
+        float: none;
+    }
+    
+    form {
+        box-shadow: 0 0 5px rgba($black, 0.38);
+        z-index: 4;
+        padding: 30px;
+        position: relative;
+        top: 39px;
+        
+        .footnote {
+            color: $white;
+        }
+    }
+    
+    .man-with-washing {
+        position: relative;
+        
+        .z-top {
+            position: absolute;
+            bottom: 2px;
+            right: -165px;
+            z-index: 2;
+        }
+        
+        .z-bot {
+            position: absolute;
+            bottom: 2px;
+            left: 0;
+            z-index: 1;
+        }
+    }
+    
+    .arrow-block {
+        background: $white;
+        color: $bgGray;
+        font: {
+            family: 'Roboto Condensed', sans-serif;
+            size: 24px;
+            weight: 400;
+        }
+        line-height: 0.98;
+        height: 106px;
+        margin-top: 58px;
+        margin-left: -7px;
+        margin-bottom: 30px;
+        padding: 15px 15px 15px 5px;
+        position: relative;
+        
+        &::before {
+            border-top: 2.249em solid transparent;
+            border-right: 1.5em solid $white;
+            border-bottom: 2.249em solid transparent;
+            width: 0;
+	        height: 0;
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 100%;
+            z-index: 5;
+        }
+        
+        span {
+            display: block;
+            color: $btnBordo;
+            font-size: 30px;
+            text-transform: uppercase;
+            
+            i {
+                @include borderRadius (2px);
+                background: $bgGray;
+                display: inline-block;
+                font-size: 24px;
+                padding: 12px;
+                position: absolute;
+                right: 22px;
+                top: -19px;
+            }
+        }
+    }
+    
+    .info-block {
+        color: $white;
+        font: {
+            family: 'Roboto Condensed', sans-serif;
+            size: 24px;
+            weight: 400;
+        }
+        line-height: 1.2;
+        text-shadow: 0 0 1px rgba($bgBlue2, 1);
+        
+        .tel {
+            display: block;
+            font-size: 40px;
+        }
+    }
+    
+    
+    .light, .bold {
+        color: $bgGray;
+    }
+    
+    .light {
+        font: {
+            size: 22px;
+            weight: 300;
+        }
+        line-height: 1.18;
+    }
+    
+    .bold {
+        font: {
+            family: 'Roboto Condensed', sans-serif;
+            size: 16px;
+            weight: 600;
+        }
+        line-height: 1.12;
+    }
+}
+
+.banner-2 {
+    @extend .banner-1;
+    background: $bgBan2 url('../images/ban-2.png') 0 15px no-repeat;
+    padding: 42px 0;
+    
+    &::before {
+        top: 0;
+        display: block;
+    }
+    
+    .flexbox {
+        align-items: center;
+    }
+    
+    form {
+        top: -30px;
+    }
+    
+    h3 {
+        color: $btnBordo;
+    }
+    
+    .light {
+        margin-bottom: 40px;
+    }
+}
+
+.banner-3 {
+    @extend .banner-1;
+    background: $bgBlue url('../images/ban-3.png') center 15px repeat;
+    color: $white;
+    text-align: center;
+    padding: 52px 0;
+    
+    &::before {
+        top: 0;
+        display: block;
+    }
+    
+    .flexbox {
+        justify-content: center;
+    }
+    
+    h3 {
+        text-shadow: 0 0 1px rgba($bgBlue2, 1);
+    }
+    
+    .bold {
+        color: $white;
+        font: {
+            family: 'Roboto', sans-serif;
+            size: 18px;
+            weight: 600;
+        }
+        line-height: 1.2;
+        
+        span {
+            display: block;
+            font: {
+                family: 'Roboto Condensed', sans-serif;
+                size: 36px;
+                weight: 400;
+            }
+            text-shadow: 0 0 1px rgba($bgBlue2, 1);
+        }
+    }
+    
+    .footnote.sub {
+        font-size: 14px;
+    }
+    
+    .footnote {
+        font-size: 12px;
+    }
+}
+
+footer {
+    @extend .banner-1;
+    background: $bgGray url('../images/ban-footer.png') center 15px repeat;
+    color: $white;
+    padding: 95px 0 1px;
+    
+    &::before {
+        top: 0;
+        display: block;
+    }
+    
+    &::after {
+        display: none;
+    }
+    
+    .flexbox {
+        align-items: center;
+    }
+    
+    form {
+        box-shadow: 0 0 5px rgba($black, 0);
+        top: 0;
+    }
+    
+    h3 {
+        span {
+            color: $btnBordo;
+            font-size: 60px;
+            line-height: 1.2;
+        }
+    }
+    
+    .light, .bold {
+        color: $white;
+    }
+    
+    .fa {
+        font-size: 24px;
+    }
+    
+    [class*="col-"]:last-child {
+        font-size: 16px;
+        font-weight: 300;
+        
+        &.padd {
+            padding-left: 7%;
+        }
+        
+        .links {
+            @include columns (2, 15px);
+            
+            a {
+                display: block;
+                color: $white;
+                text-decoration: underline;
+                
+                &:hover {
+                    color: rgba($white, 0.7);
+                }
+            }
+        }
+    }
+    
+    .copyright {
+        @include flexbox;
+        @include flexFlow(row wrap);
+        justify-content: space-between;
+        font-size: 12px;
+        margin: 30px 0 10px;
+        
+        a {
+            color: rgba($bgBlue, 1);
+            text-decoration: underline;
+            
+            &:hover {color: rgba($bgBlue * 1.3, 0.7);}
+        }
+    }
+}
+
+.price-table {
+    display: table;
+    width: 100%;
+    padding: 50px 0;
+    
+    h2 {
+        color: $bgGray;
+        font: {
+            size: 46px;
+            weight: 300;
+        }
+        line-height: 1;
+        text-align: center;
+        margin-bottom: 22px;
+        
+        & + p {
+            color: $bgBlue;
+            font-size: 18px;
+            text-align: center;
+            margin-top: 0;
+            margin-bottom: 42px;
+        }
+    }
+    
+    table {
+        width: 100%;
+        max-width: 970px;
+        margin-left: auto;
+        margin-right: auto;
+        
+        a {
+            color: $bgBlue;
+            font-size: 14px;
+            weight: 300;
+            
+            &:hover {
+                color: $bgBlue / 1.2;
+                text-decoration: none;
+            }
+            
+            i {
+                font-size: 18px;
+                margin-right: 7px;
+            }
+        }
+    }
+    
+    .free {
+        color: $btnBordo;
+    }
+    
+    a.free:hover {
+        color: $btnBordo / 1.2;
+    }
+}
+
+.logos {
+    display: table;
+    width: 100%;
+    padding: 50px 0;
+    
+    h2 {
+        color: $bgGray;
+        font: {
+            size: 46px;
+            weight: 300;
+        }
+        line-height: 1;
+        text-align: center;
+        margin-bottom: 42px;
+        
+        & + p {
+            color: $bgBlue;
+            font-size: 18px;
+            text-align: center;
+            margin-top: 0;
+            margin-bottom: 42px;
+        }
+    }
+    
+    .list-logos {
+        @include flexbox;
+        @include flexFlow(row wrap);
+        align-items: center;
+        justify-content: center;
+        
+        span {
+            padding: 10px 0;
+            width: 16.666%;
+            
+            img {
+                max-width: 100%;
+            }
+        }
+    }
+}
+
+
+.space {
+    height: 110px;
+}

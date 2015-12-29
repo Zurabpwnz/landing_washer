@@ -1,11 +1,7 @@
 /* Zurab */
-*{
-	margin: 0;
-	padding: 0;
-}
+
 
 $orange: #f96854;
-
 
 a:focus{
 	outline: none;
@@ -16,7 +12,11 @@ body{
 	font-family: 'Roboto', sans-serif;
 	font-weight: 300;
 	font-size: 14px;
-	line-height: 1.2;
+	// line-height: 1.2;
+}
+
+p{
+	margin: 15px 0;
 }
 
 h1,
@@ -34,51 +34,67 @@ h4 {
 	text-align: center;
 }
 
-
 /* services
 ==================================================*/
 .services{
 	overflow: hidden;
-	margin-bottom: 165px;
+	margin: 110px 0 100px;
 }
-	.services__item{
 
+	.services__item{
+		margin-bottom: 30px;
 	}
+
 		.services__img{
 
 		}
+
 		.services__title{
 			font-size: 30px;
 			line-height: 1.2;
 		}
+
 		.services__characteristics{
 			margin-left: 22px;
 			margin-top: 30px;
 			list-style-image: url('../images/icons/chekmark.png');
 		}
 
-
-
-
-
 /* correct
 ==================================================*/
 .correct{
 	overflow: hidden;
 }
-
-	.correct__desc{
-		
-		p{
-			margin: 5px 0;
-			font-size: 16px;
-			line-height: 1.2;
-		}
+	.correct___item{
+		margin-bottom: 30px;
 	}
 
+		.correct__time{
+			margin-top: 15px;
+			font-family: 'Roboto Condensed', sans-serif;
+			font-size: 36px;
+			line-height: 1.2;
+			text-align: center;
+			span{
+				display: block;
+				font-size: 18px;
+				line-height: 1.2;
+			}
+		}
 
+		.correct__desc{
+			margin-bottom: 25px;
+			p{
+				margin: 5px 0;
+				font-size: 16px;
+			}
+		}
 
-
+		.more{
+			font-size: 16px;
+			line-height: 1.2;
+			text-decoration: underline;
+		}
 
 /* CORNER BLOCK
 ===================================================*/
@@ -186,14 +202,20 @@ h4 {
 		color: #fff;
 	}
 
+	.error__close:hover{
+		cursor: pointer;
+	}
 
-
+	.hiddenError{
+		display: none;
+	}
 
 
 /* reviews
 ===================================================*/
 .reviews{
 }
+
 	.reviews__title{
 
 	}
@@ -207,8 +229,35 @@ h4 {
 			font-size: 24px;
 			line-height: 1.2;
 		}
+
 		.review__persone__comment{
 			margin: 5px 0;
 			font-size: 16px;
 			line-height: 1.2;
 		}
+
+
+/* стилизация телефона
+====================================*/
+.phone {
+  padding-left: 50px;
+}
+.user_phone {
+  position: relative;
+}
+.user_phone:before {
+  content: "+38";
+  display: block;
+  height: 40px;
+  color: #363636;
+  position: absolute;
+  top: 37px;
+  left: 15px;
+  font-size: 18px;
+}
+
+
+.phone::-webkit-input-placeholder {font-family: 'Roboto';font-size: 18px; font-style: normal;}
+.phone::-moz-placeholder          {font-family: 'Roboto';font-size: 18px; font-style: normal;}
+.phone:-moz-placeholder           {font-family: 'Roboto';font-size: 18px; font-style: normal;}
+.phone:-ms-input-placeholder      {font-family: 'Roboto';font-size: 18px; font-style: normal;}

@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /* line 5, ../../../Ruby22-x64/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
@@ -95,24 +96,22 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
 }
 
 /* Zurab */
-/* line 2, ../sass/_main.scss */
-* {
-  margin: 0;
-  padding: 0;
-}
-
-/* line 10, ../sass/_main.scss */
+/* line 6, ../sass/_main.scss */
 a:focus {
   outline: none;
 }
 
-/* line 14, ../sass/_main.scss */
+/* line 10, ../sass/_main.scss */
 body {
   background: #fff;
   font-family: 'Roboto', sans-serif;
   font-weight: 300;
   font-size: 14px;
-  line-height: 1.2;
+}
+
+/* line 18, ../sass/_main.scss */
+p {
+  margin: 15px 0;
 }
 
 /* line 22, ../sass/_main.scss */
@@ -134,19 +133,24 @@ h4 {
 
 /* services
 ==================================================*/
-/* line 40, ../sass/_main.scss */
+/* line 39, ../sass/_main.scss */
 .services {
   overflow: hidden;
-  margin-bottom: 165px;
+  margin: 110px 0 100px;
 }
 
-/* line 50, ../sass/_main.scss */
+/* line 44, ../sass/_main.scss */
+.services__item {
+  margin-bottom: 30px;
+}
+
+/* line 52, ../sass/_main.scss */
 .services__title {
   font-size: 30px;
   line-height: 1.2;
 }
 
-/* line 54, ../sass/_main.scss */
+/* line 57, ../sass/_main.scss */
 .services__characteristics {
   margin-left: 22px;
   margin-top: 30px;
@@ -155,38 +159,68 @@ h4 {
 
 /* correct
 ==================================================*/
-/* line 66, ../sass/_main.scss */
+/* line 65, ../sass/_main.scss */
 .correct {
   overflow: hidden;
 }
 
+/* line 68, ../sass/_main.scss */
+.correct___item {
+  margin-bottom: 30px;
+}
+
 /* line 72, ../sass/_main.scss */
+.correct__time {
+  margin-top: 15px;
+  font-family: 'Roboto Condensed', sans-serif;
+  font-size: 36px;
+  line-height: 1.2;
+  text-align: center;
+}
+/* line 78, ../sass/_main.scss */
+.correct__time span {
+  display: block;
+  font-size: 18px;
+  line-height: 1.2;
+}
+
+/* line 85, ../sass/_main.scss */
+.correct__desc {
+  margin-bottom: 25px;
+}
+/* line 87, ../sass/_main.scss */
 .correct__desc p {
   margin: 5px 0;
   font-size: 16px;
+}
+
+/* line 93, ../sass/_main.scss */
+.more {
+  font-size: 16px;
   line-height: 1.2;
+  text-decoration: underline;
 }
 
 /* CORNER BLOCK
 ===================================================*/
-/* line 85, ../sass/_main.scss */
+/* line 101, ../sass/_main.scss */
 .corner {
   overflow: hidden;
 }
 
-/* line 89, ../sass/_main.scss */
+/* line 105, ../sass/_main.scss */
 .corner__item {
   margin-bottom: 60px;
 }
 
-/* line 93, ../sass/_main.scss */
+/* line 109, ../sass/_main.scss */
 .corner__link {
   overflow: hidden;
   position: relative;
   display: block;
   margin-bottom: 30px;
 }
-/* line 99, ../sass/_main.scss */
+/* line 115, ../sass/_main.scss */
 .corner__link .corner__zoom {
   display: none;
   position: absolute;
@@ -201,12 +235,12 @@ h4 {
   border-radius: 3px;
   text-align: center;
 }
-/* line 114, ../sass/_main.scss */
+/* line 130, ../sass/_main.scss */
 .corner__link img {
   height: auto;
   width: 100%;
 }
-/* line 120, ../sass/_main.scss */
+/* line 136, ../sass/_main.scss */
 .corner__link:hover .corner__link--hover {
   background: #535751;
   display: block;
@@ -219,7 +253,7 @@ h4 {
   top: 0;
   z-index: 22;
 }
-/* line 133, ../sass/_main.scss */
+/* line 149, ../sass/_main.scss */
 .corner__link:hover .corner__zoom {
   top: 50%;
   left: 50%;
@@ -231,13 +265,13 @@ h4 {
 
 /* error
 ====================================================*/
-/* line 152, ../sass/_main.scss */
+/* line 168, ../sass/_main.scss */
 .error {
   overflow: hidden;
   position: relative;
 }
 
-/* line 157, ../sass/_main.scss */
+/* line 173, ../sass/_main.scss */
 .error__desc {
   overflow: hidden;
   background: #f96854;
@@ -247,7 +281,7 @@ h4 {
   columns: #fff;
 }
 
-/* line 166, ../sass/_main.scss */
+/* line 182, ../sass/_main.scss */
 .error__close {
   position: absolute;
   top: 30px;
@@ -255,14 +289,14 @@ h4 {
   color: #fff;
 }
 
-/* line 173, ../sass/_main.scss */
+/* line 189, ../sass/_main.scss */
 .error__title {
   font-size: 24px;
   line-height: 1.2;
   color: #fff;
 }
 
-/* line 178, ../sass/_main.scss */
+/* line 194, ../sass/_main.scss */
 .error__cnt {
   margin: 5px 0 0;
   font-size: 14px;
@@ -271,28 +305,826 @@ h4 {
   text-transform: uppercase;
 }
 
-/* line 185, ../sass/_main.scss */
+/* line 201, ../sass/_main.scss */
 address {
   color: #fff;
 }
 
+/* line 205, ../sass/_main.scss */
+.error__close:hover {
+  cursor: pointer;
+}
+
+/* line 209, ../sass/_main.scss */
+.hiddenError {
+  display: none;
+}
+
 /* reviews
 ===================================================*/
-/* line 201, ../sass/_main.scss */
+/* line 223, ../sass/_main.scss */
 .reviews__item {
   margin-bottom: 30px;
 }
 
-/* line 205, ../sass/_main.scss */
+/* line 227, ../sass/_main.scss */
 .review__persone__name {
   margin: 20px 0 0 0;
   font-size: 24px;
   line-height: 1.2;
 }
 
-/* line 210, ../sass/_main.scss */
+/* line 233, ../sass/_main.scss */
 .review__persone__comment {
   margin: 5px 0;
   font-size: 16px;
   line-height: 1.2;
+}
+
+/* ╤Б╤В╨╕╨╗╨╕╨╖╨░╤Ж╨╕╤П ╤В╨╡╨╗╨╡╤Д╨╛╨╜╨░
+====================================*/
+/* line 242, ../sass/_main.scss */
+.phone {
+  padding-left: 50px;
+}
+
+/* line 245, ../sass/_main.scss */
+.user_phone {
+  position: relative;
+}
+
+/* line 248, ../sass/_main.scss */
+.user_phone:before {
+  content: "+38";
+  display: block;
+  height: 40px;
+  color: #363636;
+  position: absolute;
+  top: 37px;
+  left: 15px;
+  font-size: 18px;
+}
+
+/* line 260, ../sass/_main.scss */
+.phone::-webkit-input-placeholder {
+  font-family: 'Roboto';
+  font-size: 18px;
+  font-style: normal;
+}
+
+/* line 261, ../sass/_main.scss */
+.phone::-moz-placeholder {
+  font-family: 'Roboto';
+  font-size: 18px;
+  font-style: normal;
+}
+
+/* line 262, ../sass/_main.scss */
+.phone:-moz-placeholder {
+  font-family: 'Roboto';
+  font-size: 18px;
+  font-style: normal;
+}
+
+/* line 263, ../sass/_main.scss */
+.phone:-ms-input-placeholder {
+  font-family: 'Roboto';
+  font-size: 18px;
+  font-style: normal;
+}
+
+/* COLORS
+============================================================*/
+/* MIXINS
+============================================================*/
+/* RESET INPUTS
+============================================================*/
+/* line 7, ../sass/_marina.scss */
+::-webkit-input-placeholder {
+  opacity: 1;
+}
+
+/* line 8, ../sass/_marina.scss */
+::-moz-placeholder {
+  opacity: 1;
+}
+
+/* Firefox 19+ */
+/* line 9, ../sass/_marina.scss */
+:-moz-placeholder {
+  opacity: 1;
+}
+
+/* Firefox 18- */
+/* line 10, ../sass/_marina.scss */
+:-ms-input-placeholder {
+  opacity: 1;
+}
+
+/* line 12, ../sass/_marina.scss */
+::-webkit-input-placeholder {
+  color: #cabfbf;
+  font-size: 143x;
+  font-style: italic;
+}
+
+/* line 13, ../sass/_marina.scss */
+::-moz-placeholder {
+  color: #cabfbf;
+  font-size: 13px;
+  font-style: italic;
+}
+
+/* Firefox 19+ */
+/* line 14, ../sass/_marina.scss */
+:-moz-placeholder {
+  color: #cabfbf;
+  font-size: 13px;
+  font-style: italic;
+}
+
+/* Firefox 18- */
+/* line 15, ../sass/_marina.scss */
+:-ms-input-placeholder {
+  color: #cabfbf;
+  font-size: 13px;
+  font-style: italic;
+}
+
+/* line 17, ../sass/_marina.scss */
+[type="search"], [type="search"]::-webkit-search-cancel-button {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  appearance: none;
+}
+
+/* line 21, ../sass/_marina.scss */
+[type="search"]::-webkit-search-decoration,
+[type="search"]::-webkit-search-cancel-button,
+[type="search"]::-webkit-search-results-button,
+[type="search"]::-webkit-search-results-decoration {
+  display: none;
+}
+
+/* line 28, ../sass/_marina.scss */
+[type=date]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  appearance: none;
+  display: none;
+}
+
+/* line 33, ../sass/_marina.scss */
+[type=date]::-webkit-calendar-picker-indicator {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  appearance: none;
+  display: none;
+}
+
+/* line 38, ../sass/_marina.scss */
+input, textarea, button, select {
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  border-radius: 2px;
+  background: #fff;
+  border: none;
+  display: block;
+  color: #535751;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 300;
+  font-size: 18px;
+  line-height: 20px;
+  margin-bottom: 15px;
+  padding: 14px 15px;
+  width: 100%;
+}
+
+/* line 54, ../sass/_marina.scss */
+[type="submit"], [type="reset"], .btn {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  appearance: none;
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  border-radius: 2px;
+}
+
+/* line 58, ../sass/_marina.scss */
+[type="submit"], [type="reset"], button, .btn {
+  background-color: #e75440;
+  background-image: -webkit-linear-gradient(top, #e75440, #b02411);
+  background-image: -moz-linear-gradient(top, #e75440, #b02411);
+  background-image: -ms-linear-gradient(top, #e75440, #b02411);
+  background-image: linear-gradient(to bottom, #e75440, #b02411);
+  border: none;
+  color: #fff;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 20px;
+  padding: 14px 15px;
+}
+/* line 70, ../sass/_marina.scss */
+[type="submit"]:hover, [type="reset"]:hover, button:hover, .btn:hover {
+  background-color: #fe5c46;
+  background-image: -webkit-linear-gradient(top, #fe5c46, #c22813);
+  background-image: -moz-linear-gradient(top, #fe5c46, #c22813);
+  background-image: -ms-linear-gradient(top, #fe5c46, #c22813);
+  background-image: linear-gradient(to bottom, #fe5c46, #c22813);
+  cursor: pointer;
+}
+
+/* line 75, ../sass/_marina.scss */
+button, .btn {
+  display: inline-block;
+}
+
+/* line 77, ../sass/_marina.scss */
+.select {
+  background: #fff;
+  display: block;
+  margin-bottom: 15px;
+  position: relative;
+  z-index: 2;
+}
+/* line 84, ../sass/_marina.scss */
+.select::before, .select::after {
+  content: '';
+  position: absolute;
+  z-index: -1;
+}
+/* line 90, ../sass/_marina.scss */
+.select::before {
+  background: rgba(83, 87, 81, 0.7);
+  width: 1px;
+  height: 100%;
+  top: 0;
+  right: 37px;
+}
+/* line 98, ../sass/_marina.scss */
+.select::after {
+  border-width: 7px 5px 0 5px;
+  border-style: solid;
+  border-color: rgba(83, 87, 81, 0.7) transparent;
+  width: 0;
+  height: 0;
+  top: 50%;
+  right: 14px;
+  margin-top: -3px;
+}
+/* line 109, ../sass/_marina.scss */
+.select select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  appearance: none;
+  background: none;
+  border: 0px none;
+  cursor: pointer;
+  margin-bottom: 0;
+  padding: 14px 45px 14px 15px;
+}
+/* line 116, ../sass/_marina.scss */
+.select select::-ms-expand {
+  display: none;
+}
+/* line 118, ../sass/_marina.scss */
+.select select option {
+  background: none;
+  border: 0px none;
+  width: 100%;
+}
+
+/* line 125, ../sass/_marina.scss */
+textarea {
+  resize: none;
+}
+
+/* line 128, ../sass/_marina.scss */
+label {
+  display: block;
+  color: #fff;
+  font-size: 18px;
+  font-weight: 500;
+  margin-bottom: 3px;
+}
+
+/* END RESET INPUTS
+============================================================*/
+/* line 140, ../sass/_marina.scss */
+body {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 300;
+}
+
+/* line 147, ../sass/_marina.scss */
+.flexbox {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-flow: row wrap;
+  -ms-flex-flow: row wrap;
+  flex-flow: row wrap;
+}
+
+/* line 152, ../sass/_marina.scss */
+.footnote {
+  font-size: 11px;
+}
+
+/* line 156, ../sass/_marina.scss */
+form {
+  background: #535751;
+  padding: 10px 30px;
+}
+/* line 160, ../sass/_marina.scss */
+form [type="submit"] {
+  margin: 30px 0 30px;
+}
+
+/* line 165, ../sass/_marina.scss */
+th {
+  text-align: left;
+  font-size: 14px;
+  font-weight: 300;
+}
+
+/* line 171, ../sass/_marina.scss */
+th, td {
+  border-bottom: 1px solid rgba(83, 87, 81, 0.12);
+  color: #535751;
+  padding: 8px 15px;
+}
+
+/* line 177, ../sass/_marina.scss */
+td {
+  font-size: 18px;
+  font-weight: 400;
+}
+
+/* line 183, ../sass/_marina.scss */
+tr:nth-child(2n) {
+  background: rgba(83, 87, 81, 0.02);
+}
+
+/* line 187, ../sass/_marina.scss */
+.banner-1, .banner-2, .banner-3, footer {
+  background: #3f9ad4 url("../images/ban-1.png") center 15px no-repeat;
+  display: table;
+  width: 100%;
+  padding-top: 1px;
+  position: relative;
+}
+/* line 194, ../sass/_marina.scss */
+.banner-1::before, .banner-2::before, .banner-3::before, footer::before, .banner-1::after, .banner-2::after, .banner-3::after, footer::after {
+  background-image: -webkit-linear-gradient(30deg, #fff 50%, transparent 50%), -webkit-linear-gradient(-30deg, #fff 50%, transparent 50%);
+  background-image: -moz-linear-gradient(30deg, #fff 50%, transparent 50%), -moz-linear-gradient(-30deg, #fff 50%, transparent 50%);
+  background-image: -ms-linear-gradient(30deg, #fff 50%, transparent 50%), -ms-linear-gradient(-30deg, #fff 50%, transparent 50%);
+  background-image: linear-gradient(30deg, #ffffff 50%, rgba(0, 0, 0, 0) 50%), linear-gradient(-30deg, #ffffff 50%, rgba(0, 0, 0, 0) 50%);
+  background-repeat: repeat-x, repeat-x, no-repeat;
+  background-position: 42px 0, 42px 0, 0 42px;
+  background-size: 84px 84px, 84px 84px, auto auto;
+  content: '';
+  width: 100%;
+  height: 44px;
+  position: absolute;
+  left: 0;
+  z-index: 3;
+}
+/* line 208, ../sass/_marina.scss */
+.banner-1::before, .banner-2::before, .banner-3::before, footer::before {
+  background-image: -webkit-linear-gradient(-30deg, #fff 50%, transparent 50%), -webkit-linear-gradient(-30deg, transparent 50%, #fff 50%);
+  background-image: -moz-linear-gradient(-30deg, #fff 50%, transparent 50%), -moz-linear-gradient(-30deg, transparent 50%, #fff 50%);
+  background-image: -ms-linear-gradient(-30deg, #fff 50%, transparent 50%), -ms-linear-gradient(-30deg, transparent 50%, #fff 50%);
+  background-image: linear-gradient(-30deg, #ffffff 50%, rgba(0, 0, 0, 0) 50%), linear-gradient(-30deg, rgba(0, 0, 0, 0) 50%, #ffffff 50%);
+  background-repeat: no-repeat, repeat-x, repeat-x;
+  background-position: 0 42px, 42px 0, 42px 0;
+  background-size: 84px 84px, 84px 84px, auto auto;
+  top: 0;
+  display: none;
+}
+/* line 218, ../sass/_marina.scss */
+.banner-1::after, .banner-2::after, .banner-3::after, footer::after {
+  bottom: 0;
+}
+/* line 222, ../sass/_marina.scss */
+.banner-1 .flexbox, .banner-2 .flexbox, .banner-3 .flexbox, footer .flexbox {
+  justify-content: flex-end;
+}
+/* line 226, ../sass/_marina.scss */
+.banner-1 h1, .banner-2 h1, .banner-3 h1, footer h1 {
+  color: #fff;
+  font-size: 50px;
+  font-weight: 400;
+  line-height: 1.1;
+  margin-bottom: 10px;
+  text-shadow: 0 0 1px #256f9f;
+  text-align: center;
+}
+/* line 237, ../sass/_marina.scss */
+.banner-1 h1 span, .banner-2 h1 span, .banner-3 h1 span, footer h1 span {
+  display: block;
+  font-size: 30px;
+}
+/* line 245, ../sass/_marina.scss */
+.banner-1 h2, .banner-2 h2, .banner-3 h2, footer h2 {
+  font-size: 46px;
+  font-weight: 300;
+  line-height: 1;
+  text-shadow: 0 0 1px #256f9f;
+}
+/* line 254, ../sass/_marina.scss */
+.banner-1 h3, .banner-2 h3, .banner-3 h3, footer h3 {
+  font-size: 36px;
+  font-weight: 300;
+  line-height: 1;
+}
+/* line 262, ../sass/_marina.scss */
+.banner-1 [class*="col-"], .banner-2 [class*="col-"], .banner-3 [class*="col-"], footer [class*="col-"] {
+  position: relative;
+  float: none;
+}
+/* line 267, ../sass/_marina.scss */
+.banner-1 form, .banner-2 form, .banner-3 form, footer form {
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.38);
+  z-index: 4;
+  padding: 30px;
+  position: relative;
+  top: 39px;
+}
+/* line 274, ../sass/_marina.scss */
+.banner-1 form .footnote, .banner-2 form .footnote, .banner-3 form .footnote, footer form .footnote {
+  color: #fff;
+}
+/* line 279, ../sass/_marina.scss */
+.banner-1 .man-with-washing, .banner-2 .man-with-washing, .banner-3 .man-with-washing, footer .man-with-washing {
+  position: relative;
+}
+/* line 282, ../sass/_marina.scss */
+.banner-1 .man-with-washing .z-top, .banner-2 .man-with-washing .z-top, .banner-3 .man-with-washing .z-top, footer .man-with-washing .z-top {
+  position: absolute;
+  bottom: 2px;
+  right: -165px;
+  z-index: 2;
+}
+/* line 289, ../sass/_marina.scss */
+.banner-1 .man-with-washing .z-bot, .banner-2 .man-with-washing .z-bot, .banner-3 .man-with-washing .z-bot, footer .man-with-washing .z-bot {
+  position: absolute;
+  bottom: 2px;
+  left: 0;
+  z-index: 1;
+}
+/* line 297, ../sass/_marina.scss */
+.banner-1 .arrow-block, .banner-2 .arrow-block, .banner-3 .arrow-block, footer .arrow-block {
+  background: #fff;
+  color: #535751;
+  font-family: 'Roboto Condensed', sans-serif;
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 0.98;
+  height: 106px;
+  margin-top: 58px;
+  margin-left: -7px;
+  margin-bottom: 30px;
+  padding: 15px 15px 15px 5px;
+  position: relative;
+}
+/* line 313, ../sass/_marina.scss */
+.banner-1 .arrow-block::before, .banner-2 .arrow-block::before, .banner-3 .arrow-block::before, footer .arrow-block::before {
+  border-top: 2.249em solid transparent;
+  border-right: 1.5em solid #fff;
+  border-bottom: 2.249em solid transparent;
+  width: 0;
+  height: 0;
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 100%;
+  z-index: 5;
+}
+/* line 326, ../sass/_marina.scss */
+.banner-1 .arrow-block span, .banner-2 .arrow-block span, .banner-3 .arrow-block span, footer .arrow-block span {
+  display: block;
+  color: #e75440;
+  font-size: 30px;
+  text-transform: uppercase;
+}
+/* line 332, ../sass/_marina.scss */
+.banner-1 .arrow-block span i, .banner-2 .arrow-block span i, .banner-3 .arrow-block span i, footer .arrow-block span i {
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  border-radius: 2px;
+  background: #535751;
+  display: inline-block;
+  font-size: 24px;
+  padding: 12px;
+  position: absolute;
+  right: 22px;
+  top: -19px;
+}
+/* line 345, ../sass/_marina.scss */
+.banner-1 .info-block, .banner-2 .info-block, .banner-3 .info-block, footer .info-block {
+  color: #fff;
+  font-family: 'Roboto Condensed', sans-serif;
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 1.2;
+  text-shadow: 0 0 1px #256f9f;
+}
+/* line 355, ../sass/_marina.scss */
+.banner-1 .info-block .tel, .banner-2 .info-block .tel, .banner-3 .info-block .tel, footer .info-block .tel {
+  display: block;
+  font-size: 40px;
+}
+/* line 362, ../sass/_marina.scss */
+.banner-1 .light, .banner-2 .light, .banner-3 .light, footer .light, .banner-1 .bold, .banner-2 .bold, .banner-3 .bold, footer .bold {
+  color: #535751;
+}
+/* line 366, ../sass/_marina.scss */
+.banner-1 .light, .banner-2 .light, .banner-3 .light, footer .light {
+  font-size: 22px;
+  font-weight: 300;
+  line-height: 1.18;
+}
+/* line 374, ../sass/_marina.scss */
+.banner-1 .bold, .banner-2 .bold, .banner-3 .bold, footer .bold {
+  font-family: 'Roboto Condensed', sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 1.12;
+}
+
+/* line 384, ../sass/_marina.scss */
+.banner-2 {
+  background: #e9ebec url("../images/ban-2.png") 0 15px no-repeat;
+  padding: 42px 0;
+}
+/* line 389, ../sass/_marina.scss */
+.banner-2::before {
+  top: 0;
+  display: block;
+}
+/* line 394, ../sass/_marina.scss */
+.banner-2 .flexbox {
+  align-items: center;
+}
+/* line 398, ../sass/_marina.scss */
+.banner-2 form {
+  top: -30px;
+}
+/* line 402, ../sass/_marina.scss */
+.banner-2 h3 {
+  color: #e75440;
+}
+/* line 406, ../sass/_marina.scss */
+.banner-2 .light {
+  margin-bottom: 40px;
+}
+
+/* line 411, ../sass/_marina.scss */
+.banner-3 {
+  background: #3f9ad4 url("../images/ban-3.png") center 15px repeat;
+  color: #fff;
+  text-align: center;
+  padding: 52px 0;
+}
+/* line 418, ../sass/_marina.scss */
+.banner-3::before {
+  top: 0;
+  display: block;
+}
+/* line 423, ../sass/_marina.scss */
+.banner-3 .flexbox {
+  justify-content: center;
+}
+/* line 427, ../sass/_marina.scss */
+.banner-3 h3 {
+  text-shadow: 0 0 1px #256f9f;
+}
+/* line 431, ../sass/_marina.scss */
+.banner-3 .bold {
+  color: #fff;
+  font-family: 'Roboto', sans-serif;
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 1.2;
+}
+/* line 440, ../sass/_marina.scss */
+.banner-3 .bold span {
+  display: block;
+  font-family: 'Roboto Condensed', sans-serif;
+  font-size: 36px;
+  font-weight: 400;
+  text-shadow: 0 0 1px #256f9f;
+}
+/* line 451, ../sass/_marina.scss */
+.banner-3 .footnote.sub {
+  font-size: 14px;
+}
+/* line 455, ../sass/_marina.scss */
+.banner-3 .footnote {
+  font-size: 12px;
+}
+
+/* line 460, ../sass/_marina.scss */
+footer {
+  background: #535751 url("../images/ban-footer.png") center 15px repeat;
+  color: #fff;
+  padding: 95px 0 1px;
+}
+/* line 466, ../sass/_marina.scss */
+footer::before {
+  top: 0;
+  display: block;
+}
+/* line 471, ../sass/_marina.scss */
+footer::after {
+  display: none;
+}
+/* line 475, ../sass/_marina.scss */
+footer .flexbox {
+  align-items: center;
+}
+/* line 479, ../sass/_marina.scss */
+footer form {
+  box-shadow: 0 0 5px transparent;
+  top: 0;
+}
+/* line 485, ../sass/_marina.scss */
+footer h3 span {
+  color: #e75440;
+  font-size: 60px;
+  line-height: 1.2;
+}
+/* line 492, ../sass/_marina.scss */
+footer .light, footer .bold {
+  color: #fff;
+}
+/* line 496, ../sass/_marina.scss */
+footer .fa {
+  font-size: 24px;
+}
+/* line 500, ../sass/_marina.scss */
+footer [class*="col-"]:last-child {
+  font-size: 16px;
+  font-weight: 300;
+}
+/* line 504, ../sass/_marina.scss */
+footer [class*="col-"]:last-child.padd {
+  padding-left: 7%;
+}
+/* line 508, ../sass/_marina.scss */
+footer [class*="col-"]:last-child .links {
+  -moz-column-count: 2;
+  -moz-column-gap: 15px;
+  -webkit-column-count: 2;
+  -webkit-column-gap: 15px;
+  column-count: 2;
+  column-gap: 15px;
+}
+/* line 511, ../sass/_marina.scss */
+footer [class*="col-"]:last-child .links a {
+  display: block;
+  color: #fff;
+  text-decoration: underline;
+}
+/* line 516, ../sass/_marina.scss */
+footer [class*="col-"]:last-child .links a:hover {
+  color: rgba(255, 255, 255, 0.7);
+}
+/* line 523, ../sass/_marina.scss */
+footer .copyright {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-flow: row wrap;
+  -ms-flex-flow: row wrap;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  font-size: 12px;
+  margin: 30px 0 10px;
+}
+/* line 530, ../sass/_marina.scss */
+footer .copyright a {
+  color: #3f9ad4;
+  text-decoration: underline;
+}
+/* line 534, ../sass/_marina.scss */
+footer .copyright a:hover {
+  color: rgba(82, 200, 255, 0.7);
+}
+
+/* line 539, ../sass/_marina.scss */
+.price-table {
+  display: table;
+  width: 100%;
+  padding: 50px 0;
+}
+/* line 544, ../sass/_marina.scss */
+.price-table h2 {
+  color: #535751;
+  font-size: 46px;
+  font-weight: 300;
+  line-height: 1;
+  text-align: center;
+  margin-bottom: 22px;
+}
+/* line 554, ../sass/_marina.scss */
+.price-table h2 + p {
+  color: #3f9ad4;
+  font-size: 18px;
+  text-align: center;
+  margin-top: 0;
+  margin-bottom: 42px;
+}
+/* line 563, ../sass/_marina.scss */
+.price-table table {
+  width: 100%;
+  max-width: 970px;
+  margin-left: auto;
+  margin-right: auto;
+}
+/* line 569, ../sass/_marina.scss */
+.price-table table a {
+  color: #3f9ad4;
+  font-size: 14px;
+  weight: 300;
+}
+/* line 574, ../sass/_marina.scss */
+.price-table table a:hover {
+  color: #3580b1;
+  text-decoration: none;
+}
+/* line 579, ../sass/_marina.scss */
+.price-table table a i {
+  font-size: 18px;
+  margin-right: 7px;
+}
+/* line 586, ../sass/_marina.scss */
+.price-table .free {
+  color: #e75440;
+}
+/* line 590, ../sass/_marina.scss */
+.price-table a.free:hover {
+  color: #c14635;
+}
+
+/* line 595, ../sass/_marina.scss */
+.logos {
+  display: table;
+  width: 100%;
+  padding: 50px 0;
+}
+/* line 600, ../sass/_marina.scss */
+.logos h2 {
+  color: #535751;
+  font-size: 46px;
+  font-weight: 300;
+  line-height: 1;
+  text-align: center;
+  margin-bottom: 42px;
+}
+/* line 610, ../sass/_marina.scss */
+.logos h2 + p {
+  color: #3f9ad4;
+  font-size: 18px;
+  text-align: center;
+  margin-top: 0;
+  margin-bottom: 42px;
+}
+/* line 619, ../sass/_marina.scss */
+.logos .list-logos {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-flow: row wrap;
+  -ms-flex-flow: row wrap;
+  flex-flow: row wrap;
+  align-items: center;
+  justify-content: center;
+}
+/* line 625, ../sass/_marina.scss */
+.logos .list-logos span {
+  padding: 10px 0;
+  width: 16.666%;
+}
+/* line 629, ../sass/_marina.scss */
+.logos .list-logos span img {
+  max-width: 100%;
+}
+
+/* line 637, ../sass/_marina.scss */
+.space {
+  height: 110px;
 }

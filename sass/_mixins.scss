@@ -1,0 +1,91 @@
+/* MIXINS
+============================================================*/
+@mixin box-sizing($x) {
+    box-sizing: $x;
+	-moz-box-sizing: $x;
+	-webkit-box-sizing: $x;
+}
+
+@mixin bgGradient($side, $startColor, $endColor) {
+    background-color: $startColor;
+    background-image: -webkit-linear-gradient($side, $startColor, $endColor);
+    background-image: -moz-linear-gradient($side, $startColor, $endColor);
+    background-image: -ms-linear-gradient($side, $startColor, $endColor);
+    background-image: linear-gradient($side, $startColor, $endColor);
+}
+
+@mixin bgGradient-figure($side, $startColor, $endColor, $side2, $startColor2, $endColor2) {
+    background-image: -webkit-linear-gradient($side, $startColor, $endColor), -webkit-linear-gradient($side2, $startColor2, $endColor2);
+    background-image: -moz-linear-gradient($side, $startColor, $endColor), -moz-linear-gradient($side2, $startColor2, $endColor2);
+    background-image: -ms-linear-gradient($side, $startColor, $endColor), -ms-linear-gradient($side2, $startColor2, $endColor2);
+    background-image: linear-gradient($side, $startColor, $endColor), linear-gradient($side2, $startColor2, $endColor2);
+}
+
+@mixin bgGradientRadio ($side, $form, $startColor, $endColor) {
+    background-color: $startColor;
+    background: -webkit-radial-gradient($side, $form, $startColor, $endColor);
+    background: -moz-radial-gradient($side, $form, $startColor, $endColor);
+    background: -ms-radial-gradient($side, $form, $startColor, $endColor);
+    background: radial-gradient($side, $form, $startColor, $endColor);
+}
+
+@mixin bgSize ($bgSize) {
+    -webkit-background-size: $bgSize;
+	-moz-background-size: $bgSize;
+	background-size: $bgSize;
+}
+
+@mixin borderRadius ($radius) {
+    -webkit-border-radius: $radius;
+    -moz-border-radius: $radius;
+    border-radius: $radius;
+}
+
+@mixin flexbox {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flexbox;
+    display: flex;
+}
+
+@mixin flexFlow ($flow) {
+    -webkit-flex-flow: $flow;
+    -ms-flex-flow: $flow;
+    flex-flow: $flow;
+}
+
+@mixin flex ($grow-shrink-basis) {
+    -webkit-flex: $grow-shrink-basis;
+    -ms-flex: $grow-shrink-basis;
+    flex: $grow-shrink-basis;
+}
+
+@mixin transition ($transition) {
+    -webkit-transition: $transition;
+    -moz-transition: $transition;
+    -ms-transition: $transition;
+    transition: $transition;
+}
+
+@mixin transition-delay ($transition-delay) {
+    -webkit-transition: $transition-delay;
+    -moz-transition: $transition-delay;
+    transition: $transition-delay;
+}
+
+@mixin columns ($column-count, $column-gap) {
+    -moz-column-count: $column-count;
+    -moz-column-gap: $column-gap;
+    -webkit-column-count: $column-count;
+    -webkit-column-gap: $column-gap;
+    column-count: $column-count;
+    column-gap: $column-gap;
+}
+
+@mixin appearance ($x) {
+    -webkit-appearance: $x;
+    -moz-appearance: $x;
+    -ms-appearance: $x;
+    appearance: $x;
+}
