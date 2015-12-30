@@ -158,7 +158,7 @@ form {
     padding: 10px 30px;
     
     [type="submit"] {
-        margin: 30px 0 30px;
+        margin: 15px 0;
     }
 }
 
@@ -192,13 +192,10 @@ tr:nth-child(2n) {
     position: relative;
     
     &::before, &::after {
-        @include bgGradient-figure(30deg, $white 50%, transparent 50%, -30deg, $white 50%, transparent 50%);
-        background-repeat: repeat-x, repeat-x, no-repeat;
-        background-position: 42px 0, 42px 0, 0 42px;
-        background-size: 84px 84px, 84px 84px, auto auto;
+        background: url('../images/zub-bot.png') 0 0 repeat-x;
         content: '';
         width: 100%;
-        height: 44px;
+        height: 23px;
         position: absolute;
         left: 0;
         z-index: 3;
@@ -206,11 +203,7 @@ tr:nth-child(2n) {
     }
     
     &::before {
-        @include bgGradient-figure(-30deg, $white 50%, transparent 50%, -30deg, transparent 50%, $white 50%);
-        background-repeat: no-repeat, repeat-x, repeat-x;
-        background-position:  0 42px, 42px 0, 42px 0;
-        background-size: 84px 84px, 84px 84px, auto auto;
-        
+        background: url('../images/zub-top.png') 0 100% repeat-x;
         top: 0;
         display: none;
     }
@@ -384,7 +377,8 @@ tr:nth-child(2n) {
 .banner-2 {
     @extend .banner-1;
     background: $bgBan2 url('../images/ban-2.png') 0 15px no-repeat;
-    padding: 42px 0;
+    margin: 82px 0 0;
+    padding: 1px 0 12px;
     
     &::before {
         top: 0;
@@ -401,6 +395,7 @@ tr:nth-child(2n) {
     
     h3 {
         color: $btnBordo;
+        margin-top: 20px;
     }
     
     .light {
@@ -413,7 +408,7 @@ tr:nth-child(2n) {
     background: $bgBlue url('../images/ban-3.png') center 15px repeat;
     color: $white;
     text-align: center;
-    padding: 52px 0;
+    padding: 24px 0 70px;
     
     &::before {
         top: 0;
@@ -539,7 +534,7 @@ footer {
 .price-table {
     display: table;
     width: 100%;
-    padding: 50px 0;
+    padding: 25px 0 50px;
     
     h2 {
         color: $bgGray;
@@ -570,6 +565,7 @@ footer {
             color: $bgBlue;
             font-size: 14px;
             weight: 300;
+            white-space: nowrap;
             
             &:hover {
                 color: $bgBlue / 1.2;
@@ -595,7 +591,7 @@ footer {
 .logos {
     display: table;
     width: 100%;
-    padding: 50px 0;
+    padding: 12px 0 96px;
     
     h2 {
         color: $bgGray;
@@ -623,17 +619,285 @@ footer {
         justify-content: center;
         
         span {
-            padding: 10px 0;
+            padding: 10px;
+            text-align: center;
             width: 16.666%;
+            
+            a {
+                display: inline-block;
+            }
             
             img {
                 max-width: 100%;
+                width: 100%;
             }
         }
     }
 }
 
+.modal-popup {
+    background: rgba($black, 0.8);
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 9999;
+    overflow-y: auto;
+    
+    .container {
+        height: 100%;
+        padding-top: 15px;
+        padding-bottom: 15px;
+    }
+    
+    .flexbox {
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+    }
+    
+    h4 {
+        color: $white;
+        font-size: 30px;
+        font-weight: 400;
+        line-height: 1;
+        margin: 0 0 15px;
+        
+        span {
+            display: block;
+            font-size: 18px;
+            padding-right: 15px;
+            position: relative;
+            
+            .fa-close {
+                color: $white;
+                font-size: 24px;
+                position: absolute;
+                right: 0;
+                bottom: -5px;
+                
+                &:hover {
+                    opacity: 0.7;
+                    text-decoration: none;
+                }
+            }
+        }
+    }
+    
+    form {
+        background: $bgBlue3;
+        
+        .footnote {
+            color: $white;
+            font-size: 12px;
+        }
+    }
+}
 
 .space {
     height: 110px;
+    background: violet;
+}
+
+
+
+
+/*--- $screen-large 1280px ---*/
+@media screen and (min-width: 1200px) {
+}
+
+/*--- $screen-small 1024px ---*/
+@media screen and (min-width: 992px) and (max-width: 1199px) {
+    .banner-2 {
+        
+        .flexbox {
+            justify-content: center;
+            
+            [class*="col-"]:first-child {
+                text-align: center;
+            }
+        }
+        
+        form {
+            top: 0;
+        }
+    }
+}
+
+@media screen and (max-width: 1199px) {
+    
+    .banner-1 {
+        .flexbox {
+            .man-with-washing {
+                display: none;
+            }
+            
+            .order {
+                order: -1;
+                
+                .arrow-block {
+                    padding: 15px 5px 15px 15px;
+                    height: auto;
+                    
+                    &::before {
+                        border-top: 2.24em solid transparent;
+                        border-left: 1.5em solid #fff;
+                        border-right: 0;
+                        border-bottom: 2.24em solid transparent;
+                        right: auto;
+                        left: 100%;
+            
+                    }
+                    
+                    i {
+                        display: none !important;
+                    }
+                }
+            }
+        }
+    }
+    
+    .banner-2 {
+        .flexbox {
+            [class*="col-"]:last-child {
+                display: none;
+            }
+        }
+    }
+    
+    footer {
+        .flexbox {
+            [class*="col-"]:first-child {
+                padding-left: 4.5%;
+            }
+        }
+        
+        .copyright {
+            padding-left: 30px;
+            padding-right: 30px;
+        }
+    }
+}
+
+/*--- $tablet-large 768px ---*/
+@media screen and (min-width: 768px) and (max-width: 991px) {
+    
+    .list-logos {
+        span {
+            width: 25% !important;
+        }
+    }
+}
+
+@media screen and (max-width: 991px) {
+    .banner-1 {
+        h1 {
+            font-size: rem(50 * 1.12);
+            
+            span {
+                font-size: rem(30 * 1.12);
+            }
+        }
+        
+        h2 {
+            font-size: rem(46 * 1.12);
+        }
+        
+        h3 {
+            font-size: rem(36 * 1.12);
+        }
+        
+        .arrow-block {
+            font-size: rem(24 * 1.2);
+            margin-top: 29px;
+            
+            &::before {
+                border-top: 2.45em solid transparent !important;
+                border-left: 1.5em solid #fff;
+                border-right: 0;
+                border-bottom: 2.45em solid transparent !important;
+            }
+            
+            span {
+                font-size: rem(30 * 1.2);
+            }
+        }
+        
+        .info-block {
+            font-size: rem(24 * 1.2);
+        }
+        
+        label {
+            font-size: rem(18 * 1.29);
+        }
+    }
+    
+    .banner-2 {
+
+        .flexbox {
+            justify-content: center;
+            
+            [class*="col-"]:first-child {
+                text-align: center;
+            }
+        }
+        
+        form {
+            top: 0;
+        }
+        
+         h2 {
+            font-size: rem(46 * 1.12);
+        }
+        
+        h3 {
+            font-size: rem(36 * 1.12);
+            margin-top: 50px;
+        }
+    }
+    .banner-3, .price-table, .logos, footer {
+        h2 {
+            font-size: rem(46 * 1.12);
+        }
+        
+        h3 {
+            font-size: rem(36 * 1.12);
+            
+            span {
+                display: block;
+                font-size: rem(60 * 1.12);
+            }
+        }
+        
+        .bold {
+            span {
+                font-size: rem(36 * 1.3);
+            }
+        }
+    }
+    
+    .modal-popup {
+        h4 {
+            font-size: rem(30 * 1.12);
+            
+            span {
+                font-size: rem(18 * 1.29);
+            }
+        }
+        
+        label {
+            font-size: rem(18 * 1.29);
+        }
+    }
+    
+    footer {
+        background: $bgGray;
+        
+        .flexbox {
+            [class*="col-"]:first-child {
+                padding-left: 5.6%;
+            }
+        }
+    }
 }

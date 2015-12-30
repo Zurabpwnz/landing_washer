@@ -12,7 +12,10 @@
     <link rel="stylesheet" href="stylesheets/bootstrap.css">
     <link rel="stylesheet" href="stylesheets/screen.css">
     <link rel="stylesheet" href="libs/bower/bower_components/fancybox/source/jquery.fancybox.css">
-    <link rel="stylesheet" href="libs/bower/bower_components/font-awesome/css/font-awesome.min.css"></head>
+    <link rel="stylesheet" href="libs/bower/bower_components/font-awesome/css/font-awesome.min.css">
+
+
+</head>
 
 <body>
 
@@ -21,7 +24,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-12">
-                    <h1>
+                    <h1 class="title">
                         Ремонт стиральных машин Electrolux в Одессе
                         <span>по цене от 150 гривен</span>
                     </h1>
@@ -33,7 +36,7 @@
                         <div class="col-md-4">
                             <form action="" method="post">
                                 <label>1. Напишите свое имя</label>
-                                <input type="text" name="" value="" placeholder="Пример: Оксана" />
+                                <input class="form__name" type="text" name="" value="" placeholder="Пример: Оксана" />
 
                                 <label>2. Выберите район города</label>
                                 <span class="select">
@@ -49,20 +52,18 @@
                                 </span>
 
                                 <div class="form-group user_phone">
-                                    <label for="phone">3. Укажите свой номер телефона</label>
-                                    <input type="tel" class="form-control phone" id="phone" name="phone" pattern="{10}" placeholder="(___) ___-__-__" required="">                                    
+                                    <label for="phone1">3. Укажите свой номер телефона</label>
+                                    <input type="tel" class="form-control phone" id="phone1" name="phone" pattern="{10}" placeholder="(___) ___-__-__" required="">                                    
                                 </div>
-
-                                <input type="submit" value="Получить помощь мастера" />
+                                
+                                <button type="submit"><i class="fa fa-wrench"></i> Получить помощь мастера</button>
 
                                 <p class="footnote">Наши мастера работают с 8.00 до 21.00 без выходны</p>
                             </form>
                         </div>
                         <div class="col-md-4">
                             <div class="arrow-block">
-                                <span> <i class="fa fa-cogs"></i>
-                                    Оставьте заявку
-                                </span>
+                                <span><i class="fa fa-cogs"></i>Оставьте заявку</span>
                                 на бесплатный выезд мастера
                                 и диагностику стиральной машины
                             </div>
@@ -71,14 +72,12 @@
                                     Наши телефоны:
                                     <span class="tel">
                                         (048) 733-02-37
-                                        <br />
-                                        (096) 042-24-49
+                                        <br />(096) 042-24-49
                                     </span>
                                 </p>
                                 <p>
                                     Наш адрес:
-                                    <br />
-                                    Одесса, ул. Вегера 55, оф. 11
+                                    <br />Одесса, ул. Вегера 55, оф. 11
                                 </p>
                             </div>
                         </div>
@@ -129,7 +128,7 @@
                 <div class="col-md-3">
                     <div class="services__item">
                         <img class="services__img" src="images/chip.png" height="72" width="72">
-                        <h3 class="services__title">Без Б/У запчастей</h3>
+                        <h3 class="services__title services__title--lstCh">Без Б/У запчастей</h3>
                         <ul class="services__characteristics">
                             <li>Ремонт в день заявки</li>
                             <li>От 15 минут до 24 часов в зависимости от поломки</li>
@@ -241,23 +240,29 @@
                         <div class="col-md-4">
                             <form action="" method="post">
                                 <label>1. Напишите свое имя</label>
-                                <input type="text" name="" value="" placeholder="Пример: Оксана" />
+                                <input class="form__name" type="text" name="" value="" placeholder="Пример: Оксана" />
 
-                                <label>2. Кратко опиишите проблему</label>
-                                <textarea placeholder="Пример: Не сливается вода, мигает экран
-панели управления и пахнет паленым"></textarea>
+                                <label>2. Выберите район города</label>
+                                <span class="select">
+                                    <select>
+                                        <option selected value="">Приморский район</option>
+                                        <option value="">Приморский район 2</option>
+                                        <option value="">Приморский район 3</option>
+                                        <option value="">Приморский район 4</option>
+                                        <option value="">Приморский район 5</option>
+                                        <option value="">Приморский район 6</option>
+                                        <option value="">Приморский район 7</option>
+                                    </select>
+                                </span>
 
                                 <div class="form-group user_phone">
-                                    <label for="phone">3. Укажите свой номер телефона</label>
-                                    <input type="tel" class="form-control phone" id="phone2" name="phone" pattern="{10}" placeholder="(___) ___-__-__" required="">
+                                    <label for="phone2">3. Укажите свой номер телефона</label>
+                                    <input type="tel" class="form-control phone" id="phone2" name="phone" pattern="{10}" placeholder="(___) ___-__-__" required="">                                    
                                 </div>
+                                
+                                <button type="submit"><i class="fa fa-wrench"></i> Получить помощь мастера</button>
 
-                                <input type="submit" value="Получить помощь мастера" />
-
-                                <p class="footnote">
-                                    Прием заявок 9 до 18 в будние дни, с 10 до 15 в выходные
-                                    <br />Наши мастера работают с 8.00 до 21.00 без выходны
-                                </p>
+                                <p class="footnote">Наши мастера работают с 8.00 до 21.00 без выходны</p>
                             </form>
                         </div>
                         <div class="col-md-4">
@@ -275,7 +280,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-12">
-                    <h2>Цены на ремонт стиральных машин Electrolux</h2>
+                    <h2 class="title">Цены на ремонт стиральных машин Electrolux</h2>
                     <p>
                         Внимание! Услуги по ремонту стиральных машин предоставляются ЧП Название компании, адрес ОДЕССА, УЛ. ВЕГЕРА, 55, ОФИС №1 
                         <br />На все виды работ предоставляется гарантия и оформляется выездная заявка на специальном бланке
@@ -344,19 +349,19 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-12">
-                    <h2>Ремонтируем не только Electrolux</h2>
+                    <h2 class="title">Ремонтируем не только Electrolux</h2>
                     <div class="list-logos">
-                        <span><img src="images/ban3-img-1.png" alt="" /></span>
-                        <span><img src="images/ban3-img-2.png" alt="" /></span>
-                        <span><img src="images/ban3-img-3.png" alt="" /></span>
-                        <span><img src="images/ban3-img-1.png" alt="" /></span>
-                        <span><img src="images/ban3-img-2.png" alt="" /></span>
-                        <span><img src="images/ban3-img-3.png" alt="" /></span>
-                        <span><img src="images/ban3-img-1.png" alt="" /></span>
-                        <span><img src="images/ban3-img-2.png" alt="" /></span>
-                        <span><img src="images/ban3-img-3.png" alt="" /></span>
-                        <span><img src="images/ban3-img-1.png" alt="" /></span>
-                        <span><img src="images/ban3-img-2.png" alt="" /></span>
+                        <a href="#"><img src="images/ban3-img-1.png" alt="" /></a>
+                        <a href="#"><img src="images/ban3-img-2.png" alt="" /></a>
+                        <a href="#"><img src="images/ban3-img-3.png" alt="" /></a>
+                        <a href="#"><img src="images/ban3-img-1.png" alt="" /></a>
+                        <a href="#"><img src="images/ban3-img-2.png" alt="" /></a>
+                        <a href="#"><img src="images/ban3-img-3.png" alt="" /></a>
+                        <a href="#"><img src="images/ban3-img-1.png" alt="" /></a>
+                        <a href="#"><img src="images/ban3-img-2.png" alt="" /></a>
+                        <a href="#"><img src="images/ban3-img-3.png" alt="" /></a>
+                        <a href="#"><img src="images/ban3-img-1.png" alt="" /></a>
+                        <a href="#"><img src="images/ban3-img-2.png" alt="" /></a>
                     </div>
                 </div>
             </div>
@@ -372,7 +377,7 @@
                    
                    <div class="row flexbox">
                        <div class="col-md-6">
-                           <h3 class="title">
+                           <h3>
                                 Нужна бесплатная диагностика 
                                 <br />и профессиональный ремонт
                                 <br />стиральной машины Electrolux?
@@ -516,7 +521,7 @@
             <div class="row">
                 <div class="col-sm-12">
                     <h2 class="title reviews--facebook__title">Оставить быстрый отзыв при помощи Facebook</h2>
-                    <img src="images/fb.jpg" height="694" width="1230" alt=""></div>
+                    <img src="images/fb.jpg" height="auto" width="100%" alt=""></div>
             </div>
         </div>
     </section>
@@ -550,23 +555,29 @@
                         <div class="col-md-4">
                             <form action="" method="post">
                                 <label>1. Напишите свое имя</label>
-                                <input type="text" name="" value="" placeholder="Пример: Оксана" />
+                                <input class="form__name" type="text" name="" value="" placeholder="Пример: Оксана" />
 
-                                <label>2. Кратко опиишите проблему</label>
-                                <textarea placeholder="Пример: Не сливается вода, мигает экран
-панели управления и пахнет паленым"></textarea>
+                                <label>2. Выберите район города</label>
+                                <span class="select">
+                                    <select>
+                                        <option selected value="">Приморский район</option>
+                                        <option value="">Приморский район 2</option>
+                                        <option value="">Приморский район 3</option>
+                                        <option value="">Приморский район 4</option>
+                                        <option value="">Приморский район 5</option>
+                                        <option value="">Приморский район 6</option>
+                                        <option value="">Приморский район 7</option>
+                                    </select>
+                                </span>
 
                                 <div class="form-group user_phone">
-                                    <label for="phone">3. Укажите свой номер телефона</label>
-                                    <input type="tel" class="form-control phone" id="phone3" name="phone" pattern="{10}" placeholder="(___) ___-__-__" required="">
+                                    <label for="phone3">3. Укажите свой номер телефона</label>
+                                    <input type="tel" class="form-control phone" id="phone3" name="phone" pattern="{10}" placeholder="(___) ___-__-__" required="">                                    
                                 </div>
+                                
+                                <button type="submit"><i class="fa fa-wrench"></i> Получить помощь мастера</button>
 
-                                <input type="submit" value="Получить помощь мастера" />
-
-                                <p class="footnote">
-                                    Прием заявок 9 до 18 в будние дни, с 10 до 15 в выходные
-                                    <br />Наши мастера работают с 8.00 до 21.00 без выходны
-                                </p>
+                                <p class="footnote">Наши мастера работают с 8.00 до 21.00 без выходны</p>
                             </form>
                         </div>
                         <div class="col-md-4 padd">
@@ -623,6 +634,16 @@
     <script src="libs/bower/bower_components/fancybox/source/jquery.fancybox.pack.js"></script>
     <script src="js/jquery.maskedinput.min.js"></script>
 
+
     <script src="js/script.js" /></script>
+
+
+<!--     <script src="js/jquery.pixlayout.0.9.7.js"></script>
+    <script type="text/javascript">
+        $(function(){
+            $.pixlayout({clip: true, src: "maket.jpg", show: true, center: true, top: 0, left: 1420, opacity: 0.6, fixed: true, pervious: true});
+        });
+    </script> -->
 </body>
 </html>
+

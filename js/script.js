@@ -18,7 +18,7 @@ $('#error__close').click(function(){
 
 /* phone */
 jQuery(function($){
-	$("#phone").mask("(999) 999-99-99");
+	$("#phone1").mask("(999) 999-99-99");
 	$("#phone2").mask("(999) 999-99-99");
 	$("#phone3").mask("(999) 999-99-99");
 });

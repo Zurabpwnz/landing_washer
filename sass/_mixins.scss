@@ -14,11 +14,12 @@
     background-image: linear-gradient($side, $startColor, $endColor);
 }
 
-@mixin bgGradient-figure($side, $startColor, $endColor, $side2, $startColor2, $endColor2) {
-    background-image: -webkit-linear-gradient($side, $startColor, $endColor), -webkit-linear-gradient($side2, $startColor2, $endColor2);
-    background-image: -moz-linear-gradient($side, $startColor, $endColor), -moz-linear-gradient($side2, $startColor2, $endColor2);
-    background-image: -ms-linear-gradient($side, $startColor, $endColor), -ms-linear-gradient($side2, $startColor2, $endColor2);
-    background-image: linear-gradient($side, $startColor, $endColor), linear-gradient($side2, $startColor2, $endColor2);
+@mixin bgGradient-romb($side, $Color1_1, $Color1_2, $Color1_3, $Color1_4, $Color1_5, $side2, $Color2_1, $Color2_2, $Color2_3, $Color2_4, $Color2_5) {
+    
+    background-image: -webkit-linear-gradient($side, $Color1_1, $Color1_2, $Color1_3, $Color1_4, $Color1_5), -webkit-linear-gradient($side2, $Color2_1, $Color2_2, $Color2_3, $Color2_4, $Color2_5);
+    background-image: -moz-linear-gradient($side, $Color1_1, $Color1_2, $Color1_3, $Color1_4, $Color1_5), -moz-linear-gradient($side2, $Color2_1, $Color2_2, $Color2_3, $Color2_4, $Color2_5);
+    background-image: -ms-linear-gradient($side, $Color1_1, $Color1_2, $Color1_3, $Color1_4, $Color1_5), -ms-linear-gradient($side2, $Color2_1, $Color2_2, $Color2_3, $Color2_4, $Color2_5);
+    background-image: linear-gradient($side, $Color1_1, $Color1_2, $Color1_3, $Color1_4, $Color1_5), linear-gradient($side2, $Color2_1, $Color2_2, $Color2_3, $Color2_4, $Color2_5);
 }
 
 @mixin bgGradientRadio ($side, $form, $startColor, $endColor) {

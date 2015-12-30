@@ -1,10 +1,18 @@
 /* Zurab */
-
-
 $orange: #f96854;
 
 a:focus{
 	outline: none;
+}
+
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+strong{
+	font-weight: 400;
 }
 
 body{
@@ -17,6 +25,8 @@ body{
 
 p{
 	margin: 15px 0;
+	font-size: 16px;
+	line-height: 1.2;
 }
 
 h1,
@@ -28,17 +38,18 @@ h4 {
 }
 
 .title{
-	margin: 40px 0;
+	margin: 34px 0;
 	font-size: 46px;
 	line-height: 1.2;
 	text-align: center;
+	color: #535751;
 }
 
 /* services
 ==================================================*/
 .services{
 	overflow: hidden;
-	margin: 110px 0 100px;
+	margin: 105px 0 80px;
 }
 
 	.services__item{
@@ -50,14 +61,22 @@ h4 {
 		}
 
 		.services__title{
+			font-size: 36px;
+			line-height: 1.4;
+		}
+
+		.services__title--lstCh{
 			font-size: 30px;
-			line-height: 1.2;
 		}
 
 		.services__characteristics{
 			margin-left: 22px;
 			margin-top: 30px;
 			list-style-image: url('../images/icons/chekmark.png');
+
+			li{
+				padding: 5px 0;
+			}
 		}
 
 /* correct
@@ -66,7 +85,7 @@ h4 {
 	overflow: hidden;
 }
 	.correct___item{
-		margin-bottom: 30px;
+		margin: 15px 0;
 	}
 
 		.correct__time{
@@ -83,7 +102,8 @@ h4 {
 		}
 
 		.correct__desc{
-			margin-bottom: 25px;
+			margin-top: -5px;
+			margin-bottom: 35px;
 			p{
 				margin: 5px 0;
 				font-size: 16px;
@@ -112,6 +132,20 @@ h4 {
 			display: block;
 			margin-bottom: 30px;
 
+							.corner__link--hover {
+				    background: #535751;
+				    display: block;
+				    width: 100%;
+				    height: 100%;
+				    opacity: 0.6;
+				    left: 0;
+				    overflow: hidden;
+				    position: absolute;
+				    top: 0;
+				    z-index: 22;
+				}
+
+
 			.corner__zoom{
 				display: none;
 				position: absolute;
@@ -133,18 +167,6 @@ h4 {
 			}
 
 			&:hover{
-				.corner__link--hover {
-				    background: #535751;
-				    display: block;
-				    width: 100%;
-				    height: 100%;
-				    opacity: 0.6;
-				    left: 0;
-				    overflow: hidden;
-				    position: absolute;
-				    top: 0;
-				    z-index: 22;
-				}
 
 				.corner__zoom{
 					top: 50%;
@@ -157,11 +179,6 @@ h4 {
 			}
 
 		}
-		
-		.corner__desc{
-
-		}
-
 
 /* error
 ====================================================*/
@@ -256,8 +273,135 @@ h4 {
   font-size: 18px;
 }
 
-
 .phone::-webkit-input-placeholder {font-family: 'Roboto';font-size: 18px; font-style: normal;}
 .phone::-moz-placeholder          {font-family: 'Roboto';font-size: 18px; font-style: normal;}
 .phone:-moz-placeholder           {font-family: 'Roboto';font-size: 18px; font-style: normal;}
 .phone:-ms-input-placeholder      {font-family: 'Roboto';font-size: 18px; font-style: normal;}
+
+.form__name::-webkit-input-placeholder {font-family: 'Roboto';font-size: 14px; font-style: italic;font-weight: 300;}
+.form__name::-moz-placeholder          {font-family: 'Roboto';font-size: 14px; font-style: italic;font-weight: 300;}
+.form__name:-moz-placeholder           {font-family: 'Roboto';font-size: 14px; font-style: italic;font-weight: 300;}
+.form__name:-ms-input-placeholder      {font-family: 'Roboto';font-size: 14px; font-style: italic;font-weight: 300;}
+
+
+
+/* ORDER
+============================================*/
+.order{
+	position: relative;
+	background: #e9ebec;
+	margin: 120px auto;
+	width: 100%;
+	height: 100%;
+
+	display: flex; /* для IE10+, для ряда браузеров нужны префиксы */
+	height: 679;  /* можно заменить на min-height */
+}
+
+.zurab{
+
+}
+.order__wrap {
+
+  margin: auto;
+  background: #9F9;
+}
+
+
+.order__wrap {
+    background: #fff none repeat scroll 0 0;
+    display: table;
+    height: 657px;
+    overflow: hidden;
+    padding: 60px 0;
+    width: 100%;
+
+	&:after{
+    background: transparent url("../images/zub-top.png") repeat-x scroll 0 0;
+    content: "";
+    height: 23px;
+    left: 0;
+    position: absolute;
+    top: 100%;
+    width: 100%;
+    z-index: 3;
+	}
+
+	&:before{
+    background: transparent url("../images/zub-bot.png") repeat-x scroll 0 0;
+    bottom: 100%;
+    content: "";
+    height: 23px;
+    left: 0;
+    position: absolute;
+    width: 100%;
+    z-index: 3;
+	}
+}
+
+	.order__title{
+		font-size: 40px;
+		line-height: 1;
+		font-weight: 900;
+		color: #4098d2;
+	}
+
+	.order__sub-title{
+		font-size: 14px;
+		color: #535751;
+		margin: 0;
+	}
+
+	.order__cnt{
+		overflow: hidden;
+		margin-top: 50px;
+		padding: 40px 0;
+		border: 1px solid #d7d7d6;
+		border-radius: 3px; 
+
+		h4{
+			font-size: 24px;
+			line-height: 1.2;
+		}
+
+		p{
+			font-size: 18px;
+			line-height: 1.2;
+		}
+	}
+
+	.uCan{
+		font-style: italic;
+		font-size: 14px;
+		line-height: 1.2;
+		text-align: center;
+	}
+
+	.buttons{
+		margin-bottom: 20px;
+		text-align: center;
+	}
+
+		.backHome{
+			background: #000;
+			display: block;
+			margin: 0 auto;
+
+			&:hover{
+				color: #fff;
+				text-decoration: none;
+			}
+		}
+
+	.order__call-back{
+		font-size: 24px;
+		line-height: 1;
+		text-align: center;
+		margin: 5px 0;
+	}	
+	.order__phone-numbers{
+		font-size: 30px;
+		line-height: 1;
+		text-align: center;
+		margin: 5px 0;
+	}

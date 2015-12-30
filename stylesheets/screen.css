@@ -96,12 +96,24 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
 }
 
 /* Zurab */
-/* line 6, ../sass/_main.scss */
+/* line 4, ../sass/_main.scss */
 a:focus {
   outline: none;
 }
 
-/* line 10, ../sass/_main.scss */
+/* line 8, ../sass/_main.scss */
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+/* line 14, ../sass/_main.scss */
+strong {
+  font-weight: 400;
+}
+
+/* line 18, ../sass/_main.scss */
 body {
   background: #fff;
   font-family: 'Roboto', sans-serif;
@@ -109,12 +121,14 @@ body {
   font-size: 14px;
 }
 
-/* line 18, ../sass/_main.scss */
+/* line 26, ../sass/_main.scss */
 p {
   margin: 15px 0;
+  font-size: 16px;
+  line-height: 1.2;
 }
 
-/* line 22, ../sass/_main.scss */
+/* line 32, ../sass/_main.scss */
 h1,
 h2,
 h3,
@@ -123,53 +137,63 @@ h4 {
   font-weight: 300;
 }
 
-/* line 30, ../sass/_main.scss */
+/* line 40, ../sass/_main.scss */
 .title {
-  margin: 40px 0;
+  margin: 34px 0;
   font-size: 46px;
   line-height: 1.2;
   text-align: center;
+  color: #535751;
 }
 
 /* services
 ==================================================*/
-/* line 39, ../sass/_main.scss */
+/* line 50, ../sass/_main.scss */
 .services {
   overflow: hidden;
-  margin: 110px 0 100px;
+  margin: 105px 0 80px;
 }
 
-/* line 44, ../sass/_main.scss */
+/* line 55, ../sass/_main.scss */
 .services__item {
   margin-bottom: 30px;
 }
 
-/* line 52, ../sass/_main.scss */
+/* line 63, ../sass/_main.scss */
 .services__title {
-  font-size: 30px;
-  line-height: 1.2;
+  font-size: 36px;
+  line-height: 1.4;
 }
 
-/* line 57, ../sass/_main.scss */
+/* line 68, ../sass/_main.scss */
+.services__title--lstCh {
+  font-size: 30px;
+}
+
+/* line 72, ../sass/_main.scss */
 .services__characteristics {
   margin-left: 22px;
   margin-top: 30px;
   list-style-image: url("../images/icons/chekmark.png");
 }
+/* line 77, ../sass/_main.scss */
+.services__characteristics li {
+  padding: 5px 0;
+}
 
 /* correct
 ==================================================*/
-/* line 65, ../sass/_main.scss */
+/* line 84, ../sass/_main.scss */
 .correct {
   overflow: hidden;
 }
 
-/* line 68, ../sass/_main.scss */
+/* line 87, ../sass/_main.scss */
 .correct___item {
-  margin-bottom: 30px;
+  margin: 15px 0;
 }
 
-/* line 72, ../sass/_main.scss */
+/* line 91, ../sass/_main.scss */
 .correct__time {
   margin-top: 15px;
   font-family: 'Roboto Condensed', sans-serif;
@@ -177,24 +201,25 @@ h4 {
   line-height: 1.2;
   text-align: center;
 }
-/* line 78, ../sass/_main.scss */
+/* line 97, ../sass/_main.scss */
 .correct__time span {
   display: block;
   font-size: 18px;
   line-height: 1.2;
 }
 
-/* line 85, ../sass/_main.scss */
+/* line 104, ../sass/_main.scss */
 .correct__desc {
-  margin-bottom: 25px;
+  margin-top: -5px;
+  margin-bottom: 35px;
 }
-/* line 87, ../sass/_main.scss */
+/* line 107, ../sass/_main.scss */
 .correct__desc p {
   margin: 5px 0;
   font-size: 16px;
 }
 
-/* line 93, ../sass/_main.scss */
+/* line 113, ../sass/_main.scss */
 .more {
   font-size: 16px;
   line-height: 1.2;
@@ -203,24 +228,37 @@ h4 {
 
 /* CORNER BLOCK
 ===================================================*/
-/* line 101, ../sass/_main.scss */
+/* line 121, ../sass/_main.scss */
 .corner {
   overflow: hidden;
 }
 
-/* line 105, ../sass/_main.scss */
+/* line 125, ../sass/_main.scss */
 .corner__item {
   margin-bottom: 60px;
 }
 
-/* line 109, ../sass/_main.scss */
+/* line 129, ../sass/_main.scss */
 .corner__link {
   overflow: hidden;
   position: relative;
   display: block;
   margin-bottom: 30px;
 }
-/* line 115, ../sass/_main.scss */
+/* line 135, ../sass/_main.scss */
+.corner__link .corner__link--hover {
+  background: #535751;
+  display: block;
+  width: 100%;
+  height: 100%;
+  opacity: 0.6;
+  left: 0;
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  z-index: 22;
+}
+/* line 149, ../sass/_main.scss */
 .corner__link .corner__zoom {
   display: none;
   position: absolute;
@@ -235,25 +273,12 @@ h4 {
   border-radius: 3px;
   text-align: center;
 }
-/* line 130, ../sass/_main.scss */
+/* line 164, ../sass/_main.scss */
 .corner__link img {
   height: auto;
   width: 100%;
 }
-/* line 136, ../sass/_main.scss */
-.corner__link:hover .corner__link--hover {
-  background: #535751;
-  display: block;
-  width: 100%;
-  height: 100%;
-  opacity: 0.6;
-  left: 0;
-  overflow: hidden;
-  position: absolute;
-  top: 0;
-  z-index: 22;
-}
-/* line 149, ../sass/_main.scss */
+/* line 171, ../sass/_main.scss */
 .corner__link:hover .corner__zoom {
   top: 50%;
   left: 50%;
@@ -265,13 +290,13 @@ h4 {
 
 /* error
 ====================================================*/
-/* line 168, ../sass/_main.scss */
+/* line 185, ../sass/_main.scss */
 .error {
   overflow: hidden;
   position: relative;
 }
 
-/* line 173, ../sass/_main.scss */
+/* line 190, ../sass/_main.scss */
 .error__desc {
   overflow: hidden;
   background: #f96854;
@@ -281,7 +306,7 @@ h4 {
   columns: #fff;
 }
 
-/* line 182, ../sass/_main.scss */
+/* line 199, ../sass/_main.scss */
 .error__close {
   position: absolute;
   top: 30px;
@@ -289,14 +314,14 @@ h4 {
   color: #fff;
 }
 
-/* line 189, ../sass/_main.scss */
+/* line 206, ../sass/_main.scss */
 .error__title {
   font-size: 24px;
   line-height: 1.2;
   color: #fff;
 }
 
-/* line 194, ../sass/_main.scss */
+/* line 211, ../sass/_main.scss */
 .error__cnt {
   margin: 5px 0 0;
   font-size: 14px;
@@ -305,36 +330,36 @@ h4 {
   text-transform: uppercase;
 }
 
-/* line 201, ../sass/_main.scss */
+/* line 218, ../sass/_main.scss */
 address {
   color: #fff;
 }
 
-/* line 205, ../sass/_main.scss */
+/* line 222, ../sass/_main.scss */
 .error__close:hover {
   cursor: pointer;
 }
 
-/* line 209, ../sass/_main.scss */
+/* line 226, ../sass/_main.scss */
 .hiddenError {
   display: none;
 }
 
 /* reviews
 ===================================================*/
-/* line 223, ../sass/_main.scss */
+/* line 240, ../sass/_main.scss */
 .reviews__item {
   margin-bottom: 30px;
 }
 
-/* line 227, ../sass/_main.scss */
+/* line 244, ../sass/_main.scss */
 .review__persone__name {
   margin: 20px 0 0 0;
   font-size: 24px;
   line-height: 1.2;
 }
 
-/* line 233, ../sass/_main.scss */
+/* line 250, ../sass/_main.scss */
 .review__persone__comment {
   margin: 5px 0;
   font-size: 16px;
@@ -343,17 +368,17 @@ address {
 
 /* ╤Б╤В╨╕╨╗╨╕╨╖╨░╤Ж╨╕╤П ╤В╨╡╨╗╨╡╤Д╨╛╨╜╨░
 ====================================*/
-/* line 242, ../sass/_main.scss */
+/* line 259, ../sass/_main.scss */
 .phone {
   padding-left: 50px;
 }
 
-/* line 245, ../sass/_main.scss */
+/* line 262, ../sass/_main.scss */
 .user_phone {
   position: relative;
 }
 
-/* line 248, ../sass/_main.scss */
+/* line 265, ../sass/_main.scss */
 .user_phone:before {
   content: "+38";
   display: block;
@@ -365,32 +390,193 @@ address {
   font-size: 18px;
 }
 
-/* line 260, ../sass/_main.scss */
+/* line 276, ../sass/_main.scss */
 .phone::-webkit-input-placeholder {
   font-family: 'Roboto';
   font-size: 18px;
   font-style: normal;
 }
 
-/* line 261, ../sass/_main.scss */
+/* line 277, ../sass/_main.scss */
 .phone::-moz-placeholder {
   font-family: 'Roboto';
   font-size: 18px;
   font-style: normal;
 }
 
-/* line 262, ../sass/_main.scss */
+/* line 278, ../sass/_main.scss */
 .phone:-moz-placeholder {
   font-family: 'Roboto';
   font-size: 18px;
   font-style: normal;
 }
 
-/* line 263, ../sass/_main.scss */
+/* line 279, ../sass/_main.scss */
 .phone:-ms-input-placeholder {
   font-family: 'Roboto';
   font-size: 18px;
   font-style: normal;
+}
+
+/* line 281, ../sass/_main.scss */
+.form__name::-webkit-input-placeholder {
+  font-family: 'Roboto';
+  font-size: 14px;
+  font-style: italic;
+  font-weight: 300;
+}
+
+/* line 282, ../sass/_main.scss */
+.form__name::-moz-placeholder {
+  font-family: 'Roboto';
+  font-size: 14px;
+  font-style: italic;
+  font-weight: 300;
+}
+
+/* line 283, ../sass/_main.scss */
+.form__name:-moz-placeholder {
+  font-family: 'Roboto';
+  font-size: 14px;
+  font-style: italic;
+  font-weight: 300;
+}
+
+/* line 284, ../sass/_main.scss */
+.form__name:-ms-input-placeholder {
+  font-family: 'Roboto';
+  font-size: 14px;
+  font-style: italic;
+  font-weight: 300;
+}
+
+/* ORDER
+============================================*/
+/* line 290, ../sass/_main.scss */
+.order {
+  position: relative;
+  background: #e9ebec;
+  margin: 120px auto;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  /* ╨┤╨╗╤П IE10+, ╨┤╨╗╤П ╤А╤П╨┤╨░ ╨▒╤А╨░╤Г╨╖╨╡╤А╨╛╨▓ ╨╜╤Г╨╢╨╜╤Л ╨┐╤А╨╡╤Д╨╕╨║╤Б╤Л */
+  height: 679;
+  /* ╨╝╨╛╨╢╨╜╨╛ ╨╖╨░╨╝╨╡╨╜╨╕╤В╤М ╨╜╨░ min-height */
+}
+
+/* line 304, ../sass/_main.scss */
+.order__wrap {
+  margin: auto;
+  background: #9F9;
+}
+
+/* line 311, ../sass/_main.scss */
+.order__wrap {
+  background: #fff none repeat scroll 0 0;
+  display: table;
+  height: 657px;
+  overflow: hidden;
+  padding: 60px 0;
+  width: 100%;
+}
+/* line 319, ../sass/_main.scss */
+.order__wrap:after {
+  background: transparent url("../images/zub-top.png") repeat-x scroll 0 0;
+  content: "";
+  height: 23px;
+  left: 0;
+  position: absolute;
+  top: 100%;
+  width: 100%;
+  z-index: 3;
+}
+/* line 330, ../sass/_main.scss */
+.order__wrap:before {
+  background: transparent url("../images/zub-bot.png") repeat-x scroll 0 0;
+  bottom: 100%;
+  content: "";
+  height: 23px;
+  left: 0;
+  position: absolute;
+  width: 100%;
+  z-index: 3;
+}
+
+/* line 342, ../sass/_main.scss */
+.order__title {
+  font-size: 40px;
+  line-height: 1;
+  font-weight: 900;
+  color: #4098d2;
+}
+
+/* line 349, ../sass/_main.scss */
+.order__sub-title {
+  font-size: 14px;
+  color: #535751;
+  margin: 0;
+}
+
+/* line 355, ../sass/_main.scss */
+.order__cnt {
+  overflow: hidden;
+  margin-top: 50px;
+  padding: 40px 0;
+  border: 1px solid #d7d7d6;
+  border-radius: 3px;
+}
+/* line 362, ../sass/_main.scss */
+.order__cnt h4 {
+  font-size: 24px;
+  line-height: 1.2;
+}
+/* line 367, ../sass/_main.scss */
+.order__cnt p {
+  font-size: 18px;
+  line-height: 1.2;
+}
+
+/* line 373, ../sass/_main.scss */
+.uCan {
+  font-style: italic;
+  font-size: 14px;
+  line-height: 1.2;
+  text-align: center;
+}
+
+/* line 380, ../sass/_main.scss */
+.buttons {
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+/* line 385, ../sass/_main.scss */
+.backHome {
+  background: #000;
+  display: block;
+  margin: 0 auto;
+}
+/* line 390, ../sass/_main.scss */
+.backHome:hover {
+  color: #fff;
+  text-decoration: none;
+}
+
+/* line 396, ../sass/_main.scss */
+.order__call-back {
+  font-size: 24px;
+  line-height: 1;
+  text-align: center;
+  margin: 5px 0;
+}
+
+/* line 402, ../sass/_main.scss */
+.order__phone-numbers {
+  font-size: 30px;
+  line-height: 1;
+  text-align: center;
+  margin: 5px 0;
 }
 
 /* COLORS
@@ -646,7 +832,7 @@ form {
 }
 /* line 160, ../sass/_marina.scss */
 form [type="submit"] {
-  margin: 30px 0 30px;
+  margin: 15px 0;
 }
 
 /* line 165, ../sass/_marina.scss */
@@ -684,41 +870,29 @@ tr:nth-child(2n) {
 }
 /* line 194, ../sass/_marina.scss */
 .banner-1::before, .banner-2::before, .banner-3::before, footer::before, .banner-1::after, .banner-2::after, .banner-3::after, footer::after {
-  background-image: -webkit-linear-gradient(30deg, #fff 50%, transparent 50%), -webkit-linear-gradient(-30deg, #fff 50%, transparent 50%);
-  background-image: -moz-linear-gradient(30deg, #fff 50%, transparent 50%), -moz-linear-gradient(-30deg, #fff 50%, transparent 50%);
-  background-image: -ms-linear-gradient(30deg, #fff 50%, transparent 50%), -ms-linear-gradient(-30deg, #fff 50%, transparent 50%);
-  background-image: linear-gradient(30deg, #ffffff 50%, rgba(0, 0, 0, 0) 50%), linear-gradient(-30deg, #ffffff 50%, rgba(0, 0, 0, 0) 50%);
-  background-repeat: repeat-x, repeat-x, no-repeat;
-  background-position: 42px 0, 42px 0, 0 42px;
-  background-size: 84px 84px, 84px 84px, auto auto;
+  background: url("../images/zub-bot.png") 0 0 repeat-x;
   content: '';
   width: 100%;
-  height: 44px;
+  height: 23px;
   position: absolute;
   left: 0;
   z-index: 3;
 }
-/* line 208, ../sass/_marina.scss */
+/* line 205, ../sass/_marina.scss */
 .banner-1::before, .banner-2::before, .banner-3::before, footer::before {
-  background-image: -webkit-linear-gradient(-30deg, #fff 50%, transparent 50%), -webkit-linear-gradient(-30deg, transparent 50%, #fff 50%);
-  background-image: -moz-linear-gradient(-30deg, #fff 50%, transparent 50%), -moz-linear-gradient(-30deg, transparent 50%, #fff 50%);
-  background-image: -ms-linear-gradient(-30deg, #fff 50%, transparent 50%), -ms-linear-gradient(-30deg, transparent 50%, #fff 50%);
-  background-image: linear-gradient(-30deg, #ffffff 50%, rgba(0, 0, 0, 0) 50%), linear-gradient(-30deg, rgba(0, 0, 0, 0) 50%, #ffffff 50%);
-  background-repeat: no-repeat, repeat-x, repeat-x;
-  background-position: 0 42px, 42px 0, 42px 0;
-  background-size: 84px 84px, 84px 84px, auto auto;
+  background: url("../images/zub-top.png") 0 100% repeat-x;
   top: 0;
   display: none;
 }
-/* line 218, ../sass/_marina.scss */
+/* line 211, ../sass/_marina.scss */
 .banner-1::after, .banner-2::after, .banner-3::after, footer::after {
   bottom: 0;
 }
-/* line 222, ../sass/_marina.scss */
+/* line 215, ../sass/_marina.scss */
 .banner-1 .flexbox, .banner-2 .flexbox, .banner-3 .flexbox, footer .flexbox {
   justify-content: flex-end;
 }
-/* line 226, ../sass/_marina.scss */
+/* line 219, ../sass/_marina.scss */
 .banner-1 h1, .banner-2 h1, .banner-3 h1, footer h1 {
   color: #fff;
   font-size: 50px;
@@ -728,30 +902,30 @@ tr:nth-child(2n) {
   text-shadow: 0 0 1px #256f9f;
   text-align: center;
 }
-/* line 237, ../sass/_marina.scss */
+/* line 230, ../sass/_marina.scss */
 .banner-1 h1 span, .banner-2 h1 span, .banner-3 h1 span, footer h1 span {
   display: block;
   font-size: 30px;
 }
-/* line 245, ../sass/_marina.scss */
+/* line 238, ../sass/_marina.scss */
 .banner-1 h2, .banner-2 h2, .banner-3 h2, footer h2 {
   font-size: 46px;
   font-weight: 300;
   line-height: 1;
   text-shadow: 0 0 1px #256f9f;
 }
-/* line 254, ../sass/_marina.scss */
+/* line 247, ../sass/_marina.scss */
 .banner-1 h3, .banner-2 h3, .banner-3 h3, footer h3 {
   font-size: 36px;
   font-weight: 300;
   line-height: 1;
 }
-/* line 262, ../sass/_marina.scss */
+/* line 255, ../sass/_marina.scss */
 .banner-1 [class*="col-"], .banner-2 [class*="col-"], .banner-3 [class*="col-"], footer [class*="col-"] {
   position: relative;
   float: none;
 }
-/* line 267, ../sass/_marina.scss */
+/* line 260, ../sass/_marina.scss */
 .banner-1 form, .banner-2 form, .banner-3 form, footer form {
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.38);
   z-index: 4;
@@ -759,29 +933,29 @@ tr:nth-child(2n) {
   position: relative;
   top: 39px;
 }
-/* line 274, ../sass/_marina.scss */
+/* line 267, ../sass/_marina.scss */
 .banner-1 form .footnote, .banner-2 form .footnote, .banner-3 form .footnote, footer form .footnote {
   color: #fff;
 }
-/* line 279, ../sass/_marina.scss */
+/* line 272, ../sass/_marina.scss */
 .banner-1 .man-with-washing, .banner-2 .man-with-washing, .banner-3 .man-with-washing, footer .man-with-washing {
   position: relative;
 }
-/* line 282, ../sass/_marina.scss */
+/* line 275, ../sass/_marina.scss */
 .banner-1 .man-with-washing .z-top, .banner-2 .man-with-washing .z-top, .banner-3 .man-with-washing .z-top, footer .man-with-washing .z-top {
   position: absolute;
   bottom: 2px;
   right: -165px;
   z-index: 2;
 }
-/* line 289, ../sass/_marina.scss */
+/* line 282, ../sass/_marina.scss */
 .banner-1 .man-with-washing .z-bot, .banner-2 .man-with-washing .z-bot, .banner-3 .man-with-washing .z-bot, footer .man-with-washing .z-bot {
   position: absolute;
   bottom: 2px;
   left: 0;
   z-index: 1;
 }
-/* line 297, ../sass/_marina.scss */
+/* line 290, ../sass/_marina.scss */
 .banner-1 .arrow-block, .banner-2 .arrow-block, .banner-3 .arrow-block, footer .arrow-block {
   background: #fff;
   color: #535751;
@@ -796,7 +970,7 @@ tr:nth-child(2n) {
   padding: 15px 15px 15px 5px;
   position: relative;
 }
-/* line 313, ../sass/_marina.scss */
+/* line 306, ../sass/_marina.scss */
 .banner-1 .arrow-block::before, .banner-2 .arrow-block::before, .banner-3 .arrow-block::before, footer .arrow-block::before {
   border-top: 2.249em solid transparent;
   border-right: 1.5em solid #fff;
@@ -809,14 +983,14 @@ tr:nth-child(2n) {
   right: 100%;
   z-index: 5;
 }
-/* line 326, ../sass/_marina.scss */
+/* line 319, ../sass/_marina.scss */
 .banner-1 .arrow-block span, .banner-2 .arrow-block span, .banner-3 .arrow-block span, footer .arrow-block span {
   display: block;
   color: #e75440;
   font-size: 30px;
   text-transform: uppercase;
 }
-/* line 332, ../sass/_marina.scss */
+/* line 325, ../sass/_marina.scss */
 .banner-1 .arrow-block span i, .banner-2 .arrow-block span i, .banner-3 .arrow-block span i, footer .arrow-block span i {
   -webkit-border-radius: 2px;
   -moz-border-radius: 2px;
@@ -829,7 +1003,7 @@ tr:nth-child(2n) {
   right: 22px;
   top: -19px;
 }
-/* line 345, ../sass/_marina.scss */
+/* line 338, ../sass/_marina.scss */
 .banner-1 .info-block, .banner-2 .info-block, .banner-3 .info-block, footer .info-block {
   color: #fff;
   font-family: 'Roboto Condensed', sans-serif;
@@ -838,22 +1012,22 @@ tr:nth-child(2n) {
   line-height: 1.2;
   text-shadow: 0 0 1px #256f9f;
 }
-/* line 355, ../sass/_marina.scss */
+/* line 348, ../sass/_marina.scss */
 .banner-1 .info-block .tel, .banner-2 .info-block .tel, .banner-3 .info-block .tel, footer .info-block .tel {
   display: block;
   font-size: 40px;
 }
-/* line 362, ../sass/_marina.scss */
+/* line 355, ../sass/_marina.scss */
 .banner-1 .light, .banner-2 .light, .banner-3 .light, footer .light, .banner-1 .bold, .banner-2 .bold, .banner-3 .bold, footer .bold {
   color: #535751;
 }
-/* line 366, ../sass/_marina.scss */
+/* line 359, ../sass/_marina.scss */
 .banner-1 .light, .banner-2 .light, .banner-3 .light, footer .light {
   font-size: 22px;
   font-weight: 300;
   line-height: 1.18;
 }
-/* line 374, ../sass/_marina.scss */
+/* line 367, ../sass/_marina.scss */
 .banner-1 .bold, .banner-2 .bold, .banner-3 .bold, footer .bold {
   font-family: 'Roboto Condensed', sans-serif;
   font-size: 16px;
@@ -861,54 +1035,56 @@ tr:nth-child(2n) {
   line-height: 1.12;
 }
 
-/* line 384, ../sass/_marina.scss */
+/* line 377, ../sass/_marina.scss */
 .banner-2 {
   background: #e9ebec url("../images/ban-2.png") 0 15px no-repeat;
-  padding: 42px 0;
+  margin: 82px 0 0;
+  padding: 1px 0 12px;
 }
-/* line 389, ../sass/_marina.scss */
+/* line 383, ../sass/_marina.scss */
 .banner-2::before {
   top: 0;
   display: block;
 }
-/* line 394, ../sass/_marina.scss */
+/* line 388, ../sass/_marina.scss */
 .banner-2 .flexbox {
   align-items: center;
 }
-/* line 398, ../sass/_marina.scss */
+/* line 392, ../sass/_marina.scss */
 .banner-2 form {
   top: -30px;
 }
-/* line 402, ../sass/_marina.scss */
+/* line 396, ../sass/_marina.scss */
 .banner-2 h3 {
   color: #e75440;
+  margin-top: 20px;
 }
-/* line 406, ../sass/_marina.scss */
+/* line 401, ../sass/_marina.scss */
 .banner-2 .light {
   margin-bottom: 40px;
 }
 
-/* line 411, ../sass/_marina.scss */
+/* line 406, ../sass/_marina.scss */
 .banner-3 {
   background: #3f9ad4 url("../images/ban-3.png") center 15px repeat;
   color: #fff;
   text-align: center;
-  padding: 52px 0;
+  padding: 24px 0 70px;
 }
-/* line 418, ../sass/_marina.scss */
+/* line 413, ../sass/_marina.scss */
 .banner-3::before {
   top: 0;
   display: block;
 }
-/* line 423, ../sass/_marina.scss */
+/* line 418, ../sass/_marina.scss */
 .banner-3 .flexbox {
   justify-content: center;
 }
-/* line 427, ../sass/_marina.scss */
+/* line 422, ../sass/_marina.scss */
 .banner-3 h3 {
   text-shadow: 0 0 1px #256f9f;
 }
-/* line 431, ../sass/_marina.scss */
+/* line 426, ../sass/_marina.scss */
 .banner-3 .bold {
   color: #fff;
   font-family: 'Roboto', sans-serif;
@@ -916,7 +1092,7 @@ tr:nth-child(2n) {
   font-weight: 600;
   line-height: 1.2;
 }
-/* line 440, ../sass/_marina.scss */
+/* line 435, ../sass/_marina.scss */
 .banner-3 .bold span {
   display: block;
   font-family: 'Roboto Condensed', sans-serif;
@@ -924,63 +1100,63 @@ tr:nth-child(2n) {
   font-weight: 400;
   text-shadow: 0 0 1px #256f9f;
 }
-/* line 451, ../sass/_marina.scss */
+/* line 446, ../sass/_marina.scss */
 .banner-3 .footnote.sub {
   font-size: 14px;
 }
-/* line 455, ../sass/_marina.scss */
+/* line 450, ../sass/_marina.scss */
 .banner-3 .footnote {
   font-size: 12px;
 }
 
-/* line 460, ../sass/_marina.scss */
+/* line 455, ../sass/_marina.scss */
 footer {
   background: #535751 url("../images/ban-footer.png") center 15px repeat;
   color: #fff;
   padding: 95px 0 1px;
 }
-/* line 466, ../sass/_marina.scss */
+/* line 461, ../sass/_marina.scss */
 footer::before {
   top: 0;
   display: block;
 }
-/* line 471, ../sass/_marina.scss */
+/* line 466, ../sass/_marina.scss */
 footer::after {
   display: none;
 }
-/* line 475, ../sass/_marina.scss */
+/* line 470, ../sass/_marina.scss */
 footer .flexbox {
   align-items: center;
 }
-/* line 479, ../sass/_marina.scss */
+/* line 474, ../sass/_marina.scss */
 footer form {
   box-shadow: 0 0 5px transparent;
   top: 0;
 }
-/* line 485, ../sass/_marina.scss */
+/* line 480, ../sass/_marina.scss */
 footer h3 span {
   color: #e75440;
   font-size: 60px;
   line-height: 1.2;
 }
-/* line 492, ../sass/_marina.scss */
+/* line 487, ../sass/_marina.scss */
 footer .light, footer .bold {
   color: #fff;
 }
-/* line 496, ../sass/_marina.scss */
+/* line 491, ../sass/_marina.scss */
 footer .fa {
   font-size: 24px;
 }
-/* line 500, ../sass/_marina.scss */
+/* line 495, ../sass/_marina.scss */
 footer [class*="col-"]:last-child {
   font-size: 16px;
   font-weight: 300;
 }
-/* line 504, ../sass/_marina.scss */
+/* line 499, ../sass/_marina.scss */
 footer [class*="col-"]:last-child.padd {
   padding-left: 7%;
 }
-/* line 508, ../sass/_marina.scss */
+/* line 503, ../sass/_marina.scss */
 footer [class*="col-"]:last-child .links {
   -moz-column-count: 2;
   -moz-column-gap: 15px;
@@ -989,17 +1165,17 @@ footer [class*="col-"]:last-child .links {
   column-count: 2;
   column-gap: 15px;
 }
-/* line 511, ../sass/_marina.scss */
+/* line 506, ../sass/_marina.scss */
 footer [class*="col-"]:last-child .links a {
   display: block;
   color: #fff;
   text-decoration: underline;
 }
-/* line 516, ../sass/_marina.scss */
+/* line 511, ../sass/_marina.scss */
 footer [class*="col-"]:last-child .links a:hover {
   color: rgba(255, 255, 255, 0.7);
 }
-/* line 523, ../sass/_marina.scss */
+/* line 518, ../sass/_marina.scss */
 footer .copyright {
   display: -webkit-box;
   display: -webkit-flex;
@@ -1013,23 +1189,23 @@ footer .copyright {
   font-size: 12px;
   margin: 30px 0 10px;
 }
-/* line 530, ../sass/_marina.scss */
+/* line 525, ../sass/_marina.scss */
 footer .copyright a {
   color: #3f9ad4;
   text-decoration: underline;
 }
-/* line 534, ../sass/_marina.scss */
+/* line 529, ../sass/_marina.scss */
 footer .copyright a:hover {
   color: rgba(82, 200, 255, 0.7);
 }
 
-/* line 539, ../sass/_marina.scss */
+/* line 534, ../sass/_marina.scss */
 .price-table {
   display: table;
   width: 100%;
-  padding: 50px 0;
+  padding: 25px 0 50px;
 }
-/* line 544, ../sass/_marina.scss */
+/* line 539, ../sass/_marina.scss */
 .price-table h2 {
   color: #535751;
   font-size: 46px;
@@ -1038,7 +1214,7 @@ footer .copyright a:hover {
   text-align: center;
   margin-bottom: 22px;
 }
-/* line 554, ../sass/_marina.scss */
+/* line 549, ../sass/_marina.scss */
 .price-table h2 + p {
   color: #3f9ad4;
   font-size: 18px;
@@ -1046,45 +1222,46 @@ footer .copyright a:hover {
   margin-top: 0;
   margin-bottom: 42px;
 }
-/* line 563, ../sass/_marina.scss */
+/* line 558, ../sass/_marina.scss */
 .price-table table {
   width: 100%;
   max-width: 970px;
   margin-left: auto;
   margin-right: auto;
 }
-/* line 569, ../sass/_marina.scss */
+/* line 564, ../sass/_marina.scss */
 .price-table table a {
   color: #3f9ad4;
   font-size: 14px;
   weight: 300;
+  white-space: nowrap;
 }
-/* line 574, ../sass/_marina.scss */
+/* line 570, ../sass/_marina.scss */
 .price-table table a:hover {
   color: #3580b1;
   text-decoration: none;
 }
-/* line 579, ../sass/_marina.scss */
+/* line 575, ../sass/_marina.scss */
 .price-table table a i {
   font-size: 18px;
   margin-right: 7px;
 }
-/* line 586, ../sass/_marina.scss */
+/* line 582, ../sass/_marina.scss */
 .price-table .free {
   color: #e75440;
 }
-/* line 590, ../sass/_marina.scss */
+/* line 586, ../sass/_marina.scss */
 .price-table a.free:hover {
   color: #c14635;
 }
 
-/* line 595, ../sass/_marina.scss */
+/* line 591, ../sass/_marina.scss */
 .logos {
   display: table;
   width: 100%;
-  padding: 50px 0;
+  padding: 12px 0 96px;
 }
-/* line 600, ../sass/_marina.scss */
+/* line 596, ../sass/_marina.scss */
 .logos h2 {
   color: #535751;
   font-size: 46px;
@@ -1093,7 +1270,7 @@ footer .copyright a:hover {
   text-align: center;
   margin-bottom: 42px;
 }
-/* line 610, ../sass/_marina.scss */
+/* line 606, ../sass/_marina.scss */
 .logos h2 + p {
   color: #3f9ad4;
   font-size: 18px;
@@ -1101,7 +1278,7 @@ footer .copyright a:hover {
   margin-top: 0;
   margin-bottom: 42px;
 }
-/* line 619, ../sass/_marina.scss */
+/* line 615, ../sass/_marina.scss */
 .logos .list-logos {
   display: -webkit-box;
   display: -webkit-flex;
@@ -1114,17 +1291,256 @@ footer .copyright a:hover {
   align-items: center;
   justify-content: center;
 }
-/* line 625, ../sass/_marina.scss */
+/* line 621, ../sass/_marina.scss */
 .logos .list-logos span {
-  padding: 10px 0;
+  padding: 10px;
+  text-align: center;
   width: 16.666%;
 }
-/* line 629, ../sass/_marina.scss */
+/* line 626, ../sass/_marina.scss */
+.logos .list-logos span a {
+  display: inline-block;
+}
+/* line 630, ../sass/_marina.scss */
 .logos .list-logos span img {
   max-width: 100%;
+  width: 100%;
 }
 
-/* line 637, ../sass/_marina.scss */
+/* line 638, ../sass/_marina.scss */
+.modal-popup {
+  background: rgba(0, 0, 0, 0.8);
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 9999;
+  overflow-y: auto;
+}
+/* line 648, ../sass/_marina.scss */
+.modal-popup .container {
+  height: 100%;
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+/* line 654, ../sass/_marina.scss */
+.modal-popup .flexbox {
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+/* line 660, ../sass/_marina.scss */
+.modal-popup h4 {
+  color: #fff;
+  font-size: 30px;
+  font-weight: 400;
+  line-height: 1;
+  margin: 0 0 15px;
+}
+/* line 667, ../sass/_marina.scss */
+.modal-popup h4 span {
+  display: block;
+  font-size: 18px;
+  padding-right: 15px;
+  position: relative;
+}
+/* line 673, ../sass/_marina.scss */
+.modal-popup h4 span .fa-close {
+  color: #fff;
+  font-size: 24px;
+  position: absolute;
+  right: 0;
+  bottom: -5px;
+}
+/* line 680, ../sass/_marina.scss */
+.modal-popup h4 span .fa-close:hover {
+  opacity: 0.7;
+  text-decoration: none;
+}
+/* line 688, ../sass/_marina.scss */
+.modal-popup form {
+  background: #4198d2;
+}
+/* line 691, ../sass/_marina.scss */
+.modal-popup form .footnote {
+  color: #fff;
+  font-size: 12px;
+}
+
+/* line 698, ../sass/_marina.scss */
 .space {
   height: 110px;
+  background: violet;
+}
+
+/*--- $screen-large 1280px ---*/
+/*--- $screen-small 1024px ---*/
+@media screen and (min-width: 992px) and (max-width: 1199px) {
+  /* line 714, ../sass/_marina.scss */
+  .banner-2 .flexbox {
+    justify-content: center;
+  }
+  /* line 717, ../sass/_marina.scss */
+  .banner-2 .flexbox [class*="col-"]:first-child {
+    text-align: center;
+  }
+  /* line 722, ../sass/_marina.scss */
+  .banner-2 form {
+    top: 0;
+  }
+}
+@media screen and (max-width: 1199px) {
+  /* line 732, ../sass/_marina.scss */
+  .banner-1 .flexbox .man-with-washing, .banner-2 .flexbox .man-with-washing, .banner-3 .flexbox .man-with-washing, footer .flexbox .man-with-washing {
+    display: none;
+  }
+  /* line 736, ../sass/_marina.scss */
+  .banner-1 .flexbox .order, .banner-2 .flexbox .order, .banner-3 .flexbox .order, footer .flexbox .order {
+    order: -1;
+  }
+  /* line 739, ../sass/_marina.scss */
+  .banner-1 .flexbox .order .arrow-block, .banner-2 .flexbox .order .arrow-block, .banner-3 .flexbox .order .arrow-block, footer .flexbox .order .arrow-block {
+    padding: 15px 5px 15px 15px;
+    height: auto;
+  }
+  /* line 743, ../sass/_marina.scss */
+  .banner-1 .flexbox .order .arrow-block::before, .banner-2 .flexbox .order .arrow-block::before, .banner-3 .flexbox .order .arrow-block::before, footer .flexbox .order .arrow-block::before {
+    border-top: 2.24em solid transparent;
+    border-left: 1.5em solid #fff;
+    border-right: 0;
+    border-bottom: 2.24em solid transparent;
+    right: auto;
+    left: 100%;
+  }
+  /* line 753, ../sass/_marina.scss */
+  .banner-1 .flexbox .order .arrow-block i, .banner-2 .flexbox .order .arrow-block i, .banner-3 .flexbox .order .arrow-block i, footer .flexbox .order .arrow-block i {
+    display: none !important;
+  }
+
+  /* line 763, ../sass/_marina.scss */
+  .banner-2 .flexbox [class*="col-"]:last-child {
+    display: none;
+  }
+
+  /* line 771, ../sass/_marina.scss */
+  footer .flexbox [class*="col-"]:first-child {
+    padding-left: 4.5%;
+  }
+  /* line 776, ../sass/_marina.scss */
+  footer .copyright {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+}
+/*--- $tablet-large 768px ---*/
+@media screen and (min-width: 768px) and (max-width: 991px) {
+  /* line 787, ../sass/_marina.scss */
+  .list-logos span {
+    width: 25% !important;
+  }
+}
+@media screen and (max-width: 991px) {
+  /* line 795, ../sass/_marina.scss */
+  .banner-1 h1, .banner-2 h1, .banner-3 h1, footer h1 {
+    font-size: rem(56);
+  }
+  /* line 798, ../sass/_marina.scss */
+  .banner-1 h1 span, .banner-2 h1 span, .banner-3 h1 span, footer h1 span {
+    font-size: rem(33.6);
+  }
+  /* line 803, ../sass/_marina.scss */
+  .banner-1 h2, .banner-2 h2, .banner-3 h2, footer h2 {
+    font-size: rem(51.52);
+  }
+  /* line 807, ../sass/_marina.scss */
+  .banner-1 h3, .banner-2 h3, .banner-3 h3, footer h3 {
+    font-size: rem(40.32);
+  }
+  /* line 811, ../sass/_marina.scss */
+  .banner-1 .arrow-block, .banner-2 .arrow-block, .banner-3 .arrow-block, footer .arrow-block {
+    font-size: rem(28.8);
+    margin-top: 29px;
+  }
+  /* line 815, ../sass/_marina.scss */
+  .banner-1 .arrow-block::before, .banner-2 .arrow-block::before, .banner-3 .arrow-block::before, footer .arrow-block::before {
+    border-top: 2.45em solid transparent !important;
+    border-left: 1.5em solid #fff;
+    border-right: 0;
+    border-bottom: 2.45em solid transparent !important;
+  }
+  /* line 822, ../sass/_marina.scss */
+  .banner-1 .arrow-block span, .banner-2 .arrow-block span, .banner-3 .arrow-block span, footer .arrow-block span {
+    font-size: rem(36);
+  }
+  /* line 827, ../sass/_marina.scss */
+  .banner-1 .info-block, .banner-2 .info-block, .banner-3 .info-block, footer .info-block {
+    font-size: rem(28.8);
+  }
+  /* line 831, ../sass/_marina.scss */
+  .banner-1 label, .banner-2 label, .banner-3 label, footer label {
+    font-size: rem(23.22);
+  }
+
+  /* line 838, ../sass/_marina.scss */
+  .banner-2 .flexbox {
+    justify-content: center;
+  }
+  /* line 841, ../sass/_marina.scss */
+  .banner-2 .flexbox [class*="col-"]:first-child {
+    text-align: center;
+  }
+  /* line 846, ../sass/_marina.scss */
+  .banner-2 form {
+    top: 0;
+  }
+  /* line 850, ../sass/_marina.scss */
+  .banner-2 h2 {
+    font-size: rem(51.52);
+  }
+  /* line 854, ../sass/_marina.scss */
+  .banner-2 h3 {
+    font-size: rem(40.32);
+    margin-top: 50px;
+  }
+
+  /* line 860, ../sass/_marina.scss */
+  .banner-3 h2, .price-table h2, .logos h2, footer h2 {
+    font-size: rem(51.52);
+  }
+  /* line 864, ../sass/_marina.scss */
+  .banner-3 h3, .price-table h3, .logos h3, footer h3 {
+    font-size: rem(40.32);
+  }
+  /* line 867, ../sass/_marina.scss */
+  .banner-3 h3 span, .price-table h3 span, .logos h3 span, footer h3 span {
+    display: block;
+    font-size: rem(67.2);
+  }
+  /* line 874, ../sass/_marina.scss */
+  .banner-3 .bold span, .price-table .bold span, .logos .bold span, footer .bold span {
+    font-size: rem(46.8);
+  }
+
+  /* line 881, ../sass/_marina.scss */
+  .modal-popup h4 {
+    font-size: rem(33.6);
+  }
+  /* line 884, ../sass/_marina.scss */
+  .modal-popup h4 span {
+    font-size: rem(23.22);
+  }
+  /* line 889, ../sass/_marina.scss */
+  .modal-popup label {
+    font-size: rem(23.22);
+  }
+
+  /* line 894, ../sass/_marina.scss */
+  footer {
+    background: #535751;
+  }
+  /* line 898, ../sass/_marina.scss */
+  footer .flexbox [class*="col-"]:first-child {
+    padding-left: 5.6%;
+  }
 }
