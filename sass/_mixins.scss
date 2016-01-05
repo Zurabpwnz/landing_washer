@@ -90,3 +90,8 @@
     -ms-appearance: $x;
     appearance: $x;
 }
+
+$browser-context: 16; // Default
+@function rem($pixels, $context: $browser-context) {
+    @return #{$pixels/$context}rem;
+}

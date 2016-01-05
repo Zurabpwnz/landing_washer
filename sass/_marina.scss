@@ -192,7 +192,7 @@ tr:nth-child(2n) {
     position: relative;
     
     &::before, &::after {
-        background: url('../images/zub-bot.png') 0 0 repeat-x;
+        background: url('../images/zub-bot-light-gray.png') 0 0 repeat-x;
         content: '';
         width: 100%;
         height: 23px;
@@ -266,6 +266,7 @@ tr:nth-child(2n) {
         
         .footnote {
             color: $white;
+            text-align: center;
         }
     }
     
@@ -274,14 +275,14 @@ tr:nth-child(2n) {
         
         .z-top {
             position: absolute;
-            bottom: 2px;
+            bottom: 0;
             right: -165px;
             z-index: 2;
         }
         
         .z-bot {
             position: absolute;
-            bottom: 2px;
+            bottom: 0px;
             left: 0;
             z-index: 1;
         }
@@ -385,6 +386,10 @@ tr:nth-child(2n) {
         display: block;
     }
     
+    &::after {
+        background: url('../images/zub-bot.png') 0 0 repeat-x;
+    }
+
     .flexbox {
         align-items: center;
     }
@@ -688,6 +693,10 @@ footer {
     form {
         background: $bgBlue3;
         
+        /*[type="submit"] {
+            margin: 15px 0;
+        }*/
+        
         .footnote {
             color: $white;
             font-size: 12px;
@@ -698,206 +707,4 @@ footer {
 .space {
     height: 110px;
     background: violet;
-}
-
-
-
-
-/*--- $screen-large 1280px ---*/
-@media screen and (min-width: 1200px) {
-}
-
-/*--- $screen-small 1024px ---*/
-@media screen and (min-width: 992px) and (max-width: 1199px) {
-    .banner-2 {
-        
-        .flexbox {
-            justify-content: center;
-            
-            [class*="col-"]:first-child {
-                text-align: center;
-            }
-        }
-        
-        form {
-            top: 0;
-        }
-    }
-}
-
-@media screen and (max-width: 1199px) {
-    
-    .banner-1 {
-        .flexbox {
-            .man-with-washing {
-                display: none;
-            }
-            
-            .order {
-                order: -1;
-                
-                .arrow-block {
-                    padding: 15px 5px 15px 15px;
-                    height: auto;
-                    
-                    &::before {
-                        border-top: 2.24em solid transparent;
-                        border-left: 1.5em solid #fff;
-                        border-right: 0;
-                        border-bottom: 2.24em solid transparent;
-                        right: auto;
-                        left: 100%;
-            
-                    }
-                    
-                    i {
-                        display: none !important;
-                    }
-                }
-            }
-        }
-    }
-    
-    .banner-2 {
-        .flexbox {
-            [class*="col-"]:last-child {
-                display: none;
-            }
-        }
-    }
-    
-    footer {
-        .flexbox {
-            [class*="col-"]:first-child {
-                padding-left: 4.5%;
-            }
-        }
-        
-        .copyright {
-            padding-left: 30px;
-            padding-right: 30px;
-        }
-    }
-}
-
-/*--- $tablet-large 768px ---*/
-@media screen and (min-width: 768px) and (max-width: 991px) {
-    
-    .list-logos {
-        span {
-            width: 25% !important;
-        }
-    }
-}
-
-@media screen and (max-width: 991px) {
-    .banner-1 {
-        h1 {
-            font-size: rem(50 * 1.12);
-            
-            span {
-                font-size: rem(30 * 1.12);
-            }
-        }
-        
-        h2 {
-            font-size: rem(46 * 1.12);
-        }
-        
-        h3 {
-            font-size: rem(36 * 1.12);
-        }
-        
-        .arrow-block {
-            font-size: rem(24 * 1.2);
-            margin-top: 29px;
-            
-            &::before {
-                border-top: 2.45em solid transparent !important;
-                border-left: 1.5em solid #fff;
-                border-right: 0;
-                border-bottom: 2.45em solid transparent !important;
-            }
-            
-            span {
-                font-size: rem(30 * 1.2);
-            }
-        }
-        
-        .info-block {
-            font-size: rem(24 * 1.2);
-        }
-        
-        label {
-            font-size: rem(18 * 1.29);
-        }
-    }
-    
-    .banner-2 {
-
-        .flexbox {
-            justify-content: center;
-            
-            [class*="col-"]:first-child {
-                text-align: center;
-            }
-        }
-        
-        form {
-            top: 0;
-        }
-        
-         h2 {
-            font-size: rem(46 * 1.12);
-        }
-        
-        h3 {
-            font-size: rem(36 * 1.12);
-            margin-top: 50px;
-        }
-    }
-    .banner-3, .price-table, .logos, footer {
-        h2 {
-            font-size: rem(46 * 1.12);
-        }
-        
-        h3 {
-            font-size: rem(36 * 1.12);
-            
-            span {
-                display: block;
-                font-size: rem(60 * 1.12);
-            }
-        }
-        
-        .bold {
-            span {
-                font-size: rem(36 * 1.3);
-            }
-        }
-    }
-    
-    .modal-popup {
-        h4 {
-            font-size: rem(30 * 1.12);
-            
-            span {
-                font-size: rem(18 * 1.29);
-            }
-        }
-        
-        label {
-            font-size: rem(18 * 1.29);
-        }
-    }
-    
-    footer {
-        background: $bgGray;
-        
-        .flexbox {
-            [class*="col-"]:first-child {
-                padding-left: 5.6%;
-            }
-        }
-    }
 }
